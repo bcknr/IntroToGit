@@ -3,12 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "IntroToGit"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "An Introduction to Git and Github in R"
+  sidebar:
+    style: "docked"
+    contents: 
+      - text: "Welcome"
+        file: index.qmd
+      - section: "Getting Started"
+        contents: 
+          - getting_started/installation.qmd
 
 format:
   html:

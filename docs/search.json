@@ -2,9 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "IntroToGit",
+    "title": "Welcome",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "In this introductory workshop will cover the fundamentals of using Git and GitHub in the R studio environment. We will introduce what Git and GitHub are, how Github can improve reproducibility, and how Git can benefit your existing research and data analysis process in R.\nIn this short workshop we will get you started on your Git journey, starting first with the (sometimes painful) processes of installing and connecting Git and GitHub. You will learn a basic workflow for incorporating Git into your research. Learn about linking a GitHub ‘repo’ to R studio, the “pull - commit - push” process, collaborating with others, and how Git can help you recover from programming disasters.\n\n\nInstalling and configuring Git and GitHub can be painful. Please attempt to work through the getting started page prior to attending the workshop.\n\n\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”."
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Create a free account at github.com. Take time to consider your username– here is some helpful advice."
+  },
+  {
+    "objectID": "installation.html#install-git",
+    "href": "installation.html#install-git",
+    "title": "Installation",
+    "section": "Install Git",
+    "text": "Install Git\nIf you do not have a current version of R or RStudio install those first from here and here. If you already have the R and RStudio installed consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:\n\nR.version.string\n\n[1] \"R version 4.2.2 Patched (2022-11-10 r83330)\"\n\n\nThere are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I’ll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want a bit more information give Happy Git a visit.\nBefore trying to install Git check to see if it is already installed. Start by opening your flavor of shell (e.g., Terminal, Command Prompt, …) and type\n\ngit --version\n\nIf Git is already installed, congratulations you can skip this part.\n\nWindows\nInstall Git for Windows.\n\n\nMac\nInstall Git via the XCode command line tools by running either\n\ngit --verion\ngit config\n\nor by directly installing the XCode tools\n\nxcode-select --install\n\n\n\nLinux\n\nUbuntu/Debian\n\nsudo apt install git\n\n\n\nFedora/Red Hat\n\nsudo yum install git"
   },
   {
     "objectID": "about.html",

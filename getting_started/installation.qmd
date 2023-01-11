@@ -1,0 +1,65 @@
+---
+title: "Installation"
+format: html
+editor: visual
+---
+
+## Create a GitHub Account
+
+Create a free account at [github.com](https://github.com). Take time to consider your username-- here is some helpful [advice](https://happygitwithr.com/github-acct.html#username-advice).
+
+## Install Git
+
+If you do not have a current version of R or RStudio, install those first from [here](https://cloud.r-project.org/) and [here](https://posit.co/download/rstudio-desktop/). If you already have the R and RStudio installed, consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:
+
+```{r}
+R.version.string
+```
+
+There are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I'll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want more information, give [Happy Git](https://happygitwithr.com/install-git.html#install-git) a visit.
+
+Before trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., `Terminal`, `Command Prompt`) and type
+
+```{r}
+#| eval: FALSE
+git --version
+```
+
+If you have Git installed, congratulations, you can skip this part.
+
+### Windows
+
+Install [Git for Windows](https://gitforwindows.org/).
+
+### Mac
+
+Install Git via the XCode command line tools by running either
+
+```{r}
+#| eval: FALSE
+git --verion
+git config
+```
+
+or by directly installing the XCode tools
+
+```{r}
+#| eval: FALSE
+xcode-select --install
+```
+
+### Linux
+
+#### Ubuntu/Debian
+
+```{r}
+#| eval: FALSE
+sudo apt install git
+```
+
+#### Fedora/Red Hat
+
+```{r}
+#| eval: FALSE
+sudo yum install git
+```
