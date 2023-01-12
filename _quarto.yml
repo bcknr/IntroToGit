@@ -4,7 +4,13 @@ project:
 
 website:
   title: "An Introduction to Git and Github in R"
+  repo-url: https://github.com/bcknr/IntroToGit
+  repo-actions: issue
   sidebar:
+    tools: 
+      - icon: github
+        text: "GitHub"
+        href: https://github.com/
     style: "docked"
     contents: 
       - text: "Welcome"
@@ -12,6 +18,8 @@ website:
       - section: "Getting Started"
         contents: 
           - getting_started/installation.qmd
+          - getting_started/pat.qmd
+          - getting_started/questions.qmd
 
 format:
   html:

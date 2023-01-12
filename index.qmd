@@ -2,15 +2,13 @@
 title: "Welcome"
 ---
 
-## Welcome
-
 This introductory workshop will cover the fundamentals of using Git and GitHub in the R studio environment. We will introduce what Git and GitHub are, how Github can improve reproducibility, and how Git can benefit your existing research and data analysis process in R.
 
-In this short workshop, we will get you started on your Git journey, starting with the (sometimes painful) processes of installing and connecting Git and GitHub. You will learn a basic workflow for incorporating Git into your research. Learn about linking a GitHub 'repo' to R studio, the "pull - commit - push" process, collaborating with others, and how Git can help you recover from programming disasters.
+In this short workshop, we will get you started on your Git journey, starting with the processes of installing and connecting Git and GitHub. You will learn a basic workflow for incorporating Git into your research. Learn about linking a GitHub 'repo' to R studio, the "pull - commit - push" process, collaborating with others, and how Git can help you recover from programming disasters.
 
 ### Pre-workshop Homework
 
-Installing and configuring Git and GitHub can be painful. Please attempt to work through the [getting started](/installation.qmd) page *prior* to attending the workshop.
+Installing and configuring Git and GitHub be finicky. Please attempt to work through the [getting started](/installation.qmd) page *prior* to attending the workshop.
 
 #### Further Reading:
 

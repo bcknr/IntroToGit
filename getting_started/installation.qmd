@@ -63,3 +63,16 @@ sudo apt install git
 #| eval: FALSE
 sudo yum install git
 ```
+
+## Link Git to R
+
+The R package `usethis` allows us to configure Git in R. Install `usethis` if you have not already and set your Git credentials using the **same** username and email your used to create your GitHub account.
+
+```{r}
+#| eval: false
+
+install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "username", user.email = "email@cornell.edu")
+```

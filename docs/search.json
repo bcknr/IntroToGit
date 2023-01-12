@@ -4,21 +4,7 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "In this introductory workshop will cover the fundamentals of using Git and GitHub in the R studio environment. We will introduce what Git and GitHub are, how Github can improve reproducibility, and how Git can benefit your existing research and data analysis process in R.\nIn this short workshop we will get you started on your Git journey, starting first with the (sometimes painful) processes of installing and connecting Git and GitHub. You will learn a basic workflow for incorporating Git into your research. Learn about linking a GitHub ‘repo’ to R studio, the “pull - commit - push” process, collaborating with others, and how Git can help you recover from programming disasters.\n\n\nInstalling and configuring Git and GitHub can be painful. Please attempt to work through the getting started page prior to attending the workshop.\n\n\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”."
-  },
-  {
-    "objectID": "installation.html",
-    "href": "installation.html",
-    "title": "Installation",
-    "section": "",
-    "text": "Create a free account at github.com. Take time to consider your username– here is some helpful advice."
-  },
-  {
-    "objectID": "installation.html#install-git",
-    "href": "installation.html#install-git",
-    "title": "Installation",
-    "section": "Install Git",
-    "text": "Install Git\nIf you do not have a current version of R or RStudio install those first from here and here. If you already have the R and RStudio installed consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:\n\nR.version.string\n\n[1] \"R version 4.2.2 Patched (2022-11-10 r83330)\"\n\n\nThere are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I’ll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want a bit more information give Happy Git a visit.\nBefore trying to install Git check to see if it is already installed. Start by opening your flavor of shell (e.g., Terminal, Command Prompt, …) and type\n\ngit --version\n\nIf Git is already installed, congratulations you can skip this part.\n\nWindows\nInstall Git for Windows.\n\n\nMac\nInstall Git via the XCode command line tools by running either\n\ngit --verion\ngit config\n\nor by directly installing the XCode tools\n\nxcode-select --install\n\n\n\nLinux\n\nUbuntu/Debian\n\nsudo apt install git\n\n\n\nFedora/Red Hat\n\nsudo yum install git"
+    "text": "This introductory workshop will cover the fundamentals of using Git and GitHub in the R studio environment. We will introduce what Git and GitHub are, how Github can improve reproducibility, and how Git can benefit your existing research and data analysis process in R.\nIn this short workshop, we will get you started on your Git journey, starting with the processes of installing and connecting Git and GitHub. You will learn a basic workflow for incorporating Git into your research. Learn about linking a GitHub ‘repo’ to R studio, the “pull - commit - push” process, collaborating with others, and how Git can help you recover from programming disasters.\n\nPre-workshop Homework\nInstalling and configuring Git and GitHub be finicky. Please attempt to work through the getting started page prior to attending the workshop.\n\nFurther Reading:\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”. As you continue learning to use Git, keep this resource close by."
   },
   {
     "objectID": "about.html",
@@ -26,5 +12,61 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "getting_started/questions.html",
+    "href": "getting_started/questions.html",
+    "title": "Questions?",
+    "section": "",
+    "text": "If you have questions or get stuck at any point create an issue by clicking “Report and Issue” on the right of every page. You will need to create a GitHub account in order to submit an issue."
+  },
+  {
+    "objectID": "getting_started/questions.html#what-are-issues",
+    "href": "getting_started/questions.html#what-are-issues",
+    "title": "Questions?",
+    "section": "What are issues?",
+    "text": "What are issues?\nIssues on GitHub are place to keep track of bugs, to dos, feature requests, questions, and more. Many R packages use GitHub for development and creating an issue are a great way to communicate directly with the developers.\n\nCreating an Issue\nTo create an issue navigate to the package or projects repo, click Issues -> New issue\n\n\nIssues support markdown styling, code chunks, and mentions. On the right you will see options to add labels.\n\n\n\nTips\nIf you are asking a question or reporting a bug create a Minimal Reproducable Example (MRE). There are many resources for learning about the best practices for MREs such as this StackOverflow answer."
+  },
+  {
+    "objectID": "getting_started/pat.html",
+    "href": "getting_started/pat.html",
+    "title": "Personal Access Token",
+    "section": "",
+    "text": "If you have used GitHub in the past, but not for a while, you may not be familiar with the use of Personal Access Tokens (PATs). PATs allow you to securely link your local Git repo with GitHub with HTTPS."
+  },
+  {
+    "objectID": "getting_started/pat.html#generating-a-pat",
+    "href": "getting_started/pat.html#generating-a-pat",
+    "title": "Personal Access Token",
+    "section": "Generating a PAT",
+    "text": "Generating a PAT\nYou can create a new PAT with the usethis package in R (recommended) or on GitHub itself.\n\nRGitHub\n\n\nIn R type:\n\nusethis::create_github_token()\n\nThis will open GitHub in a browser window, just like if you chose to create a PAT through GitHub alone (see other tab), but some of the work was done for you.\nIn the “Note” field describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., linux_vm_R). By default PATs expire. You can change the expiration date or select “no expiration”.\nOnce you are satisfied scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page. Once you navigate away from this page you will not be able to see you PAT again. Copy the token and store it somewhere safe. I store mine as an entry in password manager.\n\n\nClick on your profile picture in the upper right hand corner of GitHub and select settings\n\n\n\n\n\nScroll down through your settings (this is also where you can set up your profile further) and select the last option in the menu on the left, Developer settings .\n\n\n\n\n\nSelect Personal access tokens -> Tokens (classic) -> Generate new token -> Generate new token (classic)\n\n\n\n\n\nYou can now describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., linux_vm_R). By default PATs expire. You can change the expiration date or select “no expiration”. Under “Select scopes” check the boxes next to repo, workflow, gist, and user. I have not found the need to break from this basic usage yet.\n\nOnce you are satisfied scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page. Once you navigate away from this page you will not be able to see you PAT again. Copy the token and store it somewhere safe. I store mine as an entry in password manager."
+  },
+  {
+    "objectID": "getting_started/pat.html#set-your-pat-in-r",
+    "href": "getting_started/pat.html#set-your-pat-in-r",
+    "title": "Personal Access Token",
+    "section": "Set your PAT in R",
+    "text": "Set your PAT in R\nWhenever you are prompted for your password you will need to enter your PAT. If you are using Windows/Mac you can store your PAT directly in R using the package gitcreds:\n\ninstall.packages(\"gitcreds\")\n\nlibrary(gitcreds)\ngitcreds::gitcreds_set()"
+  },
+  {
+    "objectID": "getting_started/installation.html",
+    "href": "getting_started/installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Create a free account at github.com. Take time to consider your username– here is some helpful advice."
+  },
+  {
+    "objectID": "getting_started/installation.html#install-git",
+    "href": "getting_started/installation.html#install-git",
+    "title": "Installation",
+    "section": "Install Git",
+    "text": "Install Git\nIf you do not have a current version of R or RStudio, install those first from here and here. If you already have the R and RStudio installed, consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:\n\nR.version.string\n\n[1] \"R version 4.2.2 Patched (2022-11-10 r83330)\"\n\n\nThere are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I’ll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want more information, give Happy Git a visit.\nBefore trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., Terminal, Command Prompt) and type\n\ngit --version\n\nIf you have Git installed, congratulations, you can skip this part.\n\nWindows\nInstall Git for Windows.\n\n\nMac\nInstall Git via the XCode command line tools by running either\n\ngit --verion\ngit config\n\nor by directly installing the XCode tools\n\nxcode-select --install\n\n\n\nLinux\n\nUbuntu/Debian\n\nsudo apt install git\n\n\n\nFedora/Red Hat\n\nsudo yum install git"
+  },
+  {
+    "objectID": "getting_started/installation.html#link-git-to-r",
+    "href": "getting_started/installation.html#link-git-to-r",
+    "title": "Installation",
+    "section": "Link Git to R",
+    "text": "Link Git to R\nThe R package usethis allows us to configure Git in R. Install usethis if you have not already and set your Git credentials using the same username and email your used to create your GitHub account.\n\ninstall.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"username\", user.email = \"email@cornell.edu\")"
   }
 ]

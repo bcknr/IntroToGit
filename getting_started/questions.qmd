@@ -1,0 +1,26 @@
+---
+title: "Questions?"
+editor: visual
+---
+
+If you have questions or get stuck at any point create an issue by clicking ["Report and Issue"](https://github.com/bcknr/IntroToGit/issues/new) on the right of every page. You will need to create a GitHub account in order to submit an issue.
+
+## What are issues? 
+
+Issues on GitHub are place to keep track of bugs, to dos, feature requests, questions, and more. Many R packages use GitHub for development and creating an issue are a great way to communicate directly with the developers.
+
+### Creating an Issue
+
+To create an issue navigate to the package or projects repo, click Issues -\> New issue
+
+![](/images/issue1.png)
+
+![](/images/issue2.png)
+
+Issues support markdown styling, code chunks, and mentions. On the right you will see options to add labels.
+
+![](/images/issue3.png)
+
+### Tips
+
+If you are asking a question or reporting a bug create a Minimal Reproducable Example (MRE). There are many resources for learning about the best practices for MREs such as [this StackOverflow answer](https://stackoverflow.com/a/5963610).

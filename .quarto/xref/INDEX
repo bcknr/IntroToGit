@@ -7,5 +7,14 @@
   },
   "installation.qmd": {
     "installation.html": "45029d76"
+  },
+  "getting_started/questions.qmd": {
+    "questions.html": "edbe3ab0"
+  },
+  "getting_started/installation.qmd": {
+    "installation.html": "3241fc43"
+  },
+  "getting_started/pat.qmd": {
+    "pat.html": "83615344"
   }
 }
