@@ -3,15 +3,14 @@ title: "Personal Access Token"
 editor: visual
 ---
 
-If you have used GitHub in the past, but not for a while, you may not be familiar with the use of Personal Access Tokens (PATs). PATs allow you to securely link your local Git repo with GitHub with HTTPS.
+Personal Access Tokens (PATs) allow you to link your local Git repo with GitHub securely with HTTPS. If you have used GitHub in the past but not for a while, you may not be familiar with the use of Personal Access Tokens (PATs). In fact, you may remember using your GitHub password for everything.
 
 ## Generating a PAT
 
-You can create a new PAT with the `usethis` package in R (recommended) or on GitHub itself.
+You can create a new PAT with the `usethis` package in R (recommended) or on GitHub.
 
-:::{.panel-tabset}
-
-### R
+::: panel-tabset
+### R (Recommended)
 
 In R type:
 
@@ -20,37 +19,118 @@ In R type:
 usethis::create_github_token()
 ```
 
-This will open GitHub in a browser window, just like if you chose to create a PAT through GitHub alone (see other tab), but some of the work was done for you.
+When you run this code, it will open GitHub in a browser window, just like if you create a PAT in GitHub alone (see other tab). However, some of the work has been done for you by `usethis` (and you didn't have to spend any time navigating menus).
 
-In the "Note" field describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., `linux_vm_R`). By default PATs expire. You can change the expiration date or select "no expiration".
+In the "Note" field, describe how you will use the token. Don't worry too much about this for now, but if you use multiple PATs you will want to know what they are for in the future. I usually name it after where I will use the token or a certain project (e.g., `linux_vm_R`). 
 
-Once you are satisfied scroll to the bottom of the page and click the green "Generate Token" button. Your token will be displayed on the next page. **Once you navigate away from this page you will not be able to see you PAT again.** Copy the token and store it somewhere safe. I store mine as an entry in password manager.
+By default, PATs expire after 30 days. You can change the expiration date or select "no expiration." The expiration date exists for the sake of security. It is up to you how you want to handle that. 
+
+Under "Select scopes," the boxes next to "repo," "workflow," "gist," and "user" should be checked automatically. I have yet to find the need to break from this basic usage.
+
+Once satisfied, scroll to the bottom of the page and click the green "Generate Token" button. Your token will be displayed on the next page.
+
+::: callout-important
+#### Save your PAT
+
+Once you navigate away from this page, you will **not** be able to see your PAT again. Now is your chance to copy the token and store it somewhere safe (I add mine to my password manager).
+
+Note: If you lose your PAT, you must generate a new token.
+:::
 
 ### GitHub
 
-Click on your profile picture in the upper right hand corner of GitHub and select `settings`
+1)  Click on your profile picture in the upper right-hand corner of GitHub and select `settings`
 
-![](/images/pat1.png){fig-align="center"}
+     
 
-Scroll down through your settings (this is also where you can set up your profile further) and select the last option in the menu on the left, `Developer settings` .
+     
 
-![](/images/pat2.png){fig-align="center"}
+     
 
-Select `Personal access tokens` -\> `Tokens (classic)` -\> `Generate new token` -\> `Generate new token (classic)`
+     
 
-![](/images/pat3.png){fig-align="center"}
+     
 
-You can now describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., `linux_vm_R`). By default PATs expire. You can change the expiration date or select "no expiration". Under "Select scopes" check the boxes next to repo, workflow, gist, and user. I have not found the need to break from this basic usage yet.
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+::: column-margin
+![](/images/pat1.png)
+:::
+
+2)  Scroll down through your settings (this is also where you can set up your profile further) and select the last option in the menu on the left, `Developer settings`.
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+::: column-margin
+![](/images/pat2.png)
+:::
+
+3)  Select `Personal access tokens` -\> `Tokens (classic)` -\> `Generate new token` -\> `Generate new token (classic)`
+
+     
+
+     
+
+::: column-margin
+![](/images/pat3.png)
+:::
+
+In the "Note" field, describe how you will use the token. Don't worry too much about this for now, but if you use multiple PATs you will want to know what they are for in the future. I usually name it after where I will use the token or a certain project (e.g., `linux_vm_R`).  
+
+By default, PATs expire after 30 days. You can change the expiration date or select "no expiration." The expiration date exists for the sake of security. It is up to you how you want to handle that.  
+
+Under "Select scopes" check the boxes next to "repo," "workflow," "gist," and "user." I have yet to find the need to break from this basic usage..
 
 ![](/images/pat4.png)
 
-Once you are satisfied scroll to the bottom of the page and click the green "Generate Token" button. Your token will be displayed on the next page. **Once you navigate away from this page you will not be able to see you PAT again.** Copy the token and store it somewhere safe. I store mine as an entry in password manager.
+Once satisfied, scroll to the bottom of the page and click the green "Generate Token" button. Your token will be displayed on the next page.
 
+::: callout-important
+#### Save your PAT
+
+Once you navigate away from this page, you will **not** be able to see your PAT again. Now is your chance to copy the token and store it somewhere safe (I add mine to my password manager).
+
+Note: If you lose your PAT, you must generate a new token.
+:::
 :::
 
 ## Set your PAT in R
 
-Whenever you are prompted for your password you will need to enter your PAT. If you are using Windows/Mac you can store your PAT directly in R using the package `gitcreds`:
+From this point on, whenever you are prompted for your Github password in Rstudio, you will need to enter a valid **PAT**. If you are using Windows/Mac you can store your PAT directly in R using the package `gitcreds`:
 
 ```{r}
 #| eval: false
@@ -59,3 +139,7 @@ install.packages("gitcreds")
 library(gitcreds)
 gitcreds::gitcreds_set()
 ```
+
+In Linux, setting your git credentials using `gitcreds::` doesn't store your credentials between sessions. Instead, you will have to enter your PAT when prompted to enter your GitHub password.
+
+![](/images/password.png)

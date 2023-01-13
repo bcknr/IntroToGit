@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>An Introduction to Git and Github in R - Personal Access Token</title>
+<title>Basics of Git and Github in R - Personal Access Token</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,6 +93,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../getting_started/questions.html" rel="next">
+<link href="../getting_started/installation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -126,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -145,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">An Introduction to Git and Github in R</a> 
+      <a href="../">Basics of Git and Github in R</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/" title="GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
 </div>
@@ -203,7 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -222,57 +224,117 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>If you have used GitHub in the past, but not for a while, you may not be familiar with the use of Personal Access Tokens (PATs). PATs allow you to securely link your local Git repo with GitHub with HTTPS.</p>
-<section id="generating-a-pat" class="level2">
+<p>Personal Access Tokens (PATs) allow you to link your local Git repo with GitHub securely with HTTPS. If you have used GitHub in the past but not for a while, you may not be familiar with the use of Personal Access Tokens (PATs). In fact, you may remember using your GitHub password for everything.</p>
+<section id="generating-a-pat" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="generating-a-pat">Generating a PAT</h2>
-<p>You can create a new PAT with the <code>usethis</code> package in R (recommended) or on GitHub itself.</p>
-<div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">GitHub</a></li></ul>
-<div class="tab-content">
+<p>You can create a new PAT with the <code>usethis</code> package in R (recommended) or on GitHub.</p>
+<div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">R (Recommended)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">GitHub</a></li></ul>
+<div class="tab-content page-columns page-full">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>In R type:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will open GitHub in a browser window, just like if you chose to create a PAT through GitHub alone (see other tab), but some of the work was done for you.</p>
-<p>In the “Note” field describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., <code>linux_vm_R</code>). By default PATs expire. You can change the expiration date or select “no expiration”.</p>
-<p>Once you are satisfied scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page. <strong>Once you navigate away from this page you will not be able to see you PAT again.</strong> Copy the token and store it somewhere safe. I store mine as an entry in password manager.</p>
+<p>When you run this code, it will open GitHub in a browser window, just like if you create a PAT in GitHub alone (see other tab). However, some of the work has been done for you by <code>usethis</code> (and you didn’t have to spend any time navigating menus).</p>
+<p>In the “Note” field, describe how you will use the token. Don’t worry too much about this for now, but if you use multiple PATs you will want to know what they are for in the future. I usually name it after where I will use the token or a certain project (e.g., <code>linux_vm_R</code>).</p>
+<p>By default, PATs expire after 30 days. You can change the expiration date or select “no expiration.” The expiration date exists for the sake of security. It is up to you how you want to handle that.</p>
+<p>Under “Select scopes,” the boxes next to “repo,” “workflow,” “gist,” and “user” should be checked automatically. I have yet to find the need to break from this basic usage.</p>
+<p>Once satisfied, scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Click on your profile picture in the upper right hand corner of GitHub and select <code>settings</code></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/pat1.png" class="img-fluid figure-img"></p>
-</figure>
+<div class="callout-caption-container flex-fill">
+Save your PAT
 </div>
-<p>Scroll down through your settings (this is also where you can set up your profile further) and select the last option in the menu on the left, <code>Developer settings</code> .</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/pat2.png" class="img-fluid figure-img"></p>
-</figure>
 </div>
-<p>Select <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate new token</code> -&gt; <code>Generate new token (classic)</code></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/pat3.png" class="img-fluid figure-img"></p>
-</figure>
+<div class="callout-body-container callout-body">
+<p>Once you navigate away from this page, you will <strong>not</strong> be able to see your PAT again. Now is your chance to copy the token and store it somewhere safe (I add mine to my password manager).</p>
+<p>Note: If you lose your PAT, you must generate a new token.</p>
 </div>
-<p>You can now describe what your token will be used for. This is not super important for now, but in the future if you use multiple PATs you will want to know what they do. I usually name it after where I will use the token or a certain project (e.g., <code>linux_vm_R</code>). By default PATs expire. You can change the expiration date or select “no expiration”. Under “Select scopes” check the boxes next to repo, workflow, gist, and user. I have not found the need to break from this basic usage yet.</p>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li><p>Click on your profile picture in the upper right-hand corner of GitHub and select <code>settings</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/pat1.png" class="img-fluid"></p>
+</div></div><ol start="2" type="1">
+<li><p>Scroll down through your settings (this is also where you can set up your profile further) and select the last option in the menu on the left, <code>Developer settings</code>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/pat2.png" class="img-fluid"></p>
+</div></div><ol start="3" type="1">
+<li><p>Select <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate new token</code> -&gt; <code>Generate new token (classic)</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="../images/pat3.png" class="img-fluid"></p>
+</div></div><p>In the “Note” field, describe how you will use the token. Don’t worry too much about this for now, but if you use multiple PATs you will want to know what they are for in the future. I usually name it after where I will use the token or a certain project (e.g., <code>linux_vm_R</code>).</p>
+<p>By default, PATs expire after 30 days. You can change the expiration date or select “no expiration.” The expiration date exists for the sake of security. It is up to you how you want to handle that.</p>
+<p>Under “Select scopes” check the boxes next to “repo,” “workflow,” “gist,” and “user.” I have yet to find the need to break from this basic usage..</p>
 <p><img src="../images/pat4.png" class="img-fluid"></p>
-<p>Once you are satisfied scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page. <strong>Once you navigate away from this page you will not be able to see you PAT again.</strong> Copy the token and store it somewhere safe. I store mine as an entry in password manager.</p>
+<p>Once satisfied, scroll to the bottom of the page and click the green “Generate Token” button. Your token will be displayed on the next page.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Save your PAT
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Once you navigate away from this page, you will <strong>not</strong> be able to see your PAT again. Now is your chance to copy the token and store it somewhere safe (I add mine to my password manager).</p>
+<p>Note: If you lose your PAT, you must generate a new token.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="set-your-pat-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="set-your-pat-in-r">Set your PAT in R</h2>
-<p>Whenever you are prompted for your password you will need to enter your PAT. If you are using Windows/Mac you can store your PAT directly in R using the package <code>gitcreds</code>:</p>
+<p>From this point on, whenever you are prompted for your Github password in Rstudio, you will need to enter a valid <strong>PAT</strong>. If you are using Windows/Mac you can store your PAT directly in R using the package <code>gitcreds</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gitcreds"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gitcreds)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>In Linux, setting your git credentials using <code>gitcreds::</code> doesn’t store your credentials between sessions. Instead, you will have to enter your PAT when prompted to enter your GitHub password.</p>
+<p><img src="../images/password.png" class="img-fluid"></p>
 
 
 </section>
@@ -411,6 +473,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../getting_started/installation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Installation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../getting_started/questions.html" class="pagination-link">
+        <span class="nav-page-text">Questions?</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

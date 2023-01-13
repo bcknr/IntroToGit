@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>An Introduction to Git and Github in R - Questions?</title>
+<title>Basics of Git and Github in R - Questions?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../getting_started/pat.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">An Introduction to Git and Github in R</a> 
+      <a href="../">Basics of Git and Github in R</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/" title="GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
 </div>
@@ -137,7 +138,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-are-issues" id="toc-what-are-issues" class="nav-link active" data-scroll-target="#what-are-issues">What are issues?</a>
   <ul class="collapse">
   <li><a href="#creating-an-issue" id="toc-creating-an-issue" class="nav-link" data-scroll-target="#creating-an-issue">Creating an Issue</a></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -162,21 +162,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>If you have questions or get stuck at any point create an issue by clicking <a href="https://github.com/bcknr/IntroToGit/issues/new">“Report and Issue”</a> on the right of every page. You will need to create a GitHub account in order to submit an issue.</p>
+<p>If you have questions or get stuck at any point create an issue by clicking <a href="https://github.com/bcknr/IntroToGit/issues/new">“Report and Issue”</a> on the right of every page. Note: a GitHub account is required to submit an issue.</p>
+<p>I encourage everyone to keep tabs on the <a href="https://github.com/bcknr/IntroToGit/issues">issues</a> in the workshop’s repo and answer each others questions! Feel free to use this as a place to work together as you continue to learn Git and GitHub.</p>
 <section id="what-are-issues" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-issues">What are issues?</h2>
-<p>Issues on GitHub are place to keep track of bugs, to dos, feature requests, questions, and more. Many R packages use GitHub for development and creating an issue are a great way to communicate directly with the developers.</p>
+<p>The issues tab is the place in a repo to keep track of bugs, to-dos, feature requests, questions, and more. For the sake of simplicity, there are two main uses for those of us who generally use GitHub for data analysis:</p>
+<ol type="1">
+<li>Many R packages use GitHub for development, and creating an issue is a great way to communicate directly with the package developers. If you are looking for help with a popular R package (think <code>tidyverse</code>) you are probably better off using resources like Stack Overflow. However, the issue tab can be a great resource for niche or uncommon packages. Just make sure to check that your question wasn’t already answered!</li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip - Minimal Reproducible Examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Whenever you ask a question or report a bug, create a Minimal Reproducible Example (MRE). There are many resources for learning about the best practices for MREs, such as <a href="https://stackoverflow.com/a/5963610">this Stack Overflow answer</a>.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>When collaborating with others using GitHub, the issues tab is a great place to communicate and keep organized. You can create to-dos or highlight bugs/errors in the analysis, assign collaborators to certain tasks, and label each issue with custom tags.</li>
+</ol>
 <section id="creating-an-issue" class="level3">
 <h3 class="anchored" data-anchor-id="creating-an-issue">Creating an Issue</h3>
-<p>To create an issue navigate to the package or projects repo, click Issues -&gt; New issue</p>
+<p>To create an issue, navigate to the package or projects repo, click <code>Issues</code> -&gt; <code>New issue</code></p>
 <p><img src="../images/issue1.png" class="img-fluid"></p>
 <p><img src="../images/issue2.png" class="img-fluid"></p>
-<p>Issues support markdown styling, code chunks, and mentions. On the right you will see options to add labels.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Issues support markdown styling, code chunks, and mentions. On the right, you will see options to add labels and to assign the issue to someone.</p>
 <p><img src="../images/issue3.png" class="img-fluid"></p>
-</section>
-<section id="tips" class="level3">
-<h3 class="anchored" data-anchor-id="tips">Tips</h3>
-<p>If you are asking a question or reporting a bug create a Minimal Reproducable Example (MRE). There are many resources for learning about the best practices for MREs such as <a href="https://stackoverflow.com/a/5963610">this StackOverflow answer</a>.</p>
+</div>
+</div>
 
 
 </section>
@@ -316,6 +344,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../getting_started/pat.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Personal Access Token</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

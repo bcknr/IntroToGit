@@ -3,9 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "An Introduction to Git and Github in R"
+  title: "Basics of Git and Github in R"
   repo-url: https://github.com/bcknr/IntroToGit
   repo-actions: issue
+  page-navigation: true
   sidebar:
     tools: 
       - icon: github

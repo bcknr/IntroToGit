@@ -3,24 +3,34 @@ title: "Questions?"
 editor: visual
 ---
 
-If you have questions or get stuck at any point create an issue by clicking ["Report and Issue"](https://github.com/bcknr/IntroToGit/issues/new) on the right of every page. You will need to create a GitHub account in order to submit an issue.
+If you have questions or get stuck at any point create an issue by clicking ["Report and Issue"](https://github.com/bcknr/IntroToGit/issues/new) on the right of every page. Note: a GitHub account is required to submit an issue.
 
-## What are issues? 
+I encourage everyone to keep tabs on the [issues](https://github.com/bcknr/IntroToGit/issues) in the workshop's repo and answer each others questions! Feel free to use this as a place to work together as you continue to learn Git and GitHub.
 
-Issues on GitHub are place to keep track of bugs, to dos, feature requests, questions, and more. Many R packages use GitHub for development and creating an issue are a great way to communicate directly with the developers.
+## What are issues?
+
+The issues tab is the place in a repo to keep track of bugs, to-dos, feature requests, questions, and more. For the sake of simplicity, there are two main uses for those of us who generally use GitHub for data analysis:
+
+1)  Many R packages use GitHub for development, and creating an issue is a great way to communicate directly with the package developers. If you are looking for help with a popular R package (think `tidyverse`) you are probably better off using resources like Stack Overflow. However, the issue tab can be a great resource for niche or uncommon packages. Just make sure to check that your question wasn't already answered!
+
+::: callout-tip
+### Tip - Minimal Reproducible Examples
+
+Whenever you ask a question or report a bug, create a Minimal Reproducible Example (MRE). There are many resources for learning about the best practices for MREs, such as [this Stack Overflow answer](https://stackoverflow.com/a/5963610).
+:::
+
+2)  When collaborating with others using GitHub, the issues tab is a great place to communicate and keep organized. You can create to-dos or highlight bugs/errors in the analysis, assign collaborators to certain tasks, and label each issue with custom tags.
 
 ### Creating an Issue
 
-To create an issue navigate to the package or projects repo, click Issues -\> New issue
+To create an issue, navigate to the package or projects repo, click `Issues` -\> `New issue`
 
 ![](/images/issue1.png)
 
 ![](/images/issue2.png)
 
-Issues support markdown styling, code chunks, and mentions. On the right you will see options to add labels.
+::: callout-note
+Issues support markdown styling, code chunks, and mentions. On the right, you will see options to add labels and to assign the issue to someone.
 
 ![](/images/issue3.png)
-
-### Tips
-
-If you are asking a question or reporting a bug create a Minimal Reproducable Example (MRE). There are many resources for learning about the best practices for MREs such as [this StackOverflow answer](https://stackoverflow.com/a/5963610).
+:::

@@ -18,14 +18,14 @@ R.version.string
 
 There are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I'll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want more information, give [Happy Git](https://happygitwithr.com/install-git.html#install-git) a visit.
 
-Before trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., `Terminal`, `Command Prompt`) and type
+Before trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., `Terminal`, `Command Prompt`) and type:
 
-```{r}
+```{bash}
 #| eval: FALSE
 git --version
 ```
 
-If you have Git installed, congratulations, you can skip this part.
+If you have Git installed, congratulations, you can skip to the [next](pat.qmd) section.
 
 ### Windows
 
@@ -33,9 +33,9 @@ Install [Git for Windows](https://gitforwindows.org/).
 
 ### Mac
 
-Install Git via the XCode command line tools by running either
+Install Git via the XCode command line tools by running
 
-```{r}
+```{bash}
 #| eval: FALSE
 git --verion
 git config
@@ -43,7 +43,7 @@ git config
 
 or by directly installing the XCode tools
 
-```{r}
+```{bash}
 #| eval: FALSE
 xcode-select --install
 ```
@@ -52,21 +52,21 @@ xcode-select --install
 
 #### Ubuntu/Debian
 
-```{r}
+```{bash}
 #| eval: FALSE
 sudo apt install git
 ```
 
 #### Fedora/Red Hat
 
-```{r}
+```{bash}
 #| eval: FALSE
 sudo yum install git
 ```
 
 ## Link Git to R
 
-The R package `usethis` allows us to configure Git in R. Install `usethis` if you have not already and set your Git credentials using the **same** username and email your used to create your GitHub account.
+The R package `usethis` allows us to configure Git in R. Install `usethis` if you have not already and set your Git credentials using the **same** username and email you used to create your GitHub account.
 
 ```{r}
 #| eval: false

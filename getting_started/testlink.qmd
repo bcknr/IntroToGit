@@ -1,0 +1,6 @@
+---
+title: "Check it works"
+editor: visual
+---
+
+Lastly, we will check that all of our set-up worked correctly by creating a new repo.
