@@ -20,6 +20,7 @@ website:
         contents: 
           - getting_started/installation.qmd
           - getting_started/pat.qmd
+          - getting_started/testlink.qmd
           - getting_started/questions.qmd
 
 format:

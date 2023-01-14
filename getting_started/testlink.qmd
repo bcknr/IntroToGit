@@ -1,6 +1,75 @@
 ---
-title: "Check it works"
+title: "Test Connection"
 editor: visual
 ---
 
-Lastly, we will check that all of our set-up worked correctly by creating a new repo.
+Lastly, we will check that our set-up worked by creating a new git repository. I won't go into the details of what we are doing here-- we will cover that during the workshop-- but for now, trust the process.
+
+## Create a Repo
+
+1.  Log in to your [GitHub](https://github.com/) account and click ![green new repo button](/images/new.png){width="69"} on the left hand side of the home page.
+
+2.  Name your repo, provide a brief description, check "Add a README file," and then click![](/images/createrepo.png){width="120"}
+
+    ![](/images/newrepo.png)
+
+3.  Click ![](/images/code.png){width="86"} and copy the "HTTPS" link
+
+    ![](/images/clone.png){width="400"}
+
+## Clone your Repo
+
+1.  Open RStudio and create a new project: `File` -\> `New Project…` -\> `Version Control` -\> `Git`
+
+::: {layout-ncol="2"}
+![](/images/newproj1.png){width="417"}
+
+![](/images/newproj2.png){width="417"}
+:::
+
+::: callout-important
+## Error: RStudio can't find Git
+
+Don't see an option for `Version Control`? Jenny Bryan has a useful [guide](https://happygitwithr.com/rstudio-see-git.html#rstudio-see-git) for troubleshooting just this!
+:::
+
+2.  Paste the link you copied from GitHub in the *Repository URL* field. The *Project directory name* fill will be automatically populated with the name of your Repo on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named "github" (`~/github`). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials.
+
+::: callout-important
+### Entering Credentials
+
+Remember: whenever you are prompted to enter your GitHub password enter your **PAT**.
+
+::: {layout-ncol="2"}
+![](/images/username.png){width="250"}
+
+![](/images/password.png){width="250"}
+:::
+:::
+
+## Check connection
+
+You should now see a new *Git* tab in the "environment panel" in RStudio and a couple of new files in your project folder. To make sure everything is set up correctly and you can communicate with GitHub, we will "commit" our first change.
+
+1.  Navigate to the project you just created in RStudio, open the `README.md` file, make a minor edit, and save your changes.
+
+2.  You should now see `README.md` in the Git tab
+
+    ![](/images/readme_git.png)
+
+3.  Check the *Staged* box next to `REARME.md`. Click ![](/images/pull.png){width="58"} and then ![](/images/commit.png)
+
+4.  In the window that popped up, type "update readme" in the *commit* box and hit commit
+
+    ![](/images/commitwindow.png)
+
+5.  A status window will open. If there are no errors, hit the close button and then ![](/images/push.png)
+
+6.  Open the repo on GitHub and check that your edits were made by looking at the README.md file.
+
+::: callout-important
+## Errors and unexpected behavior
+
+If you experience any problems with this step check Jenny Bryan's troubleshooting [guide](https://happygitwithr.com/troubleshooting.html).
+
+:::

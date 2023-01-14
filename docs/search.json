@@ -51,9 +51,30 @@
   {
     "objectID": "getting_started/testlink.html",
     "href": "getting_started/testlink.html",
-    "title": "Check it works",
+    "title": "Test Connection",
     "section": "",
-    "text": "Lastly, we will check that all of our set-up worked correctly by creating a new repo."
+    "text": "Lastly, we will check that our set-up worked by creating a new git repository. I won’t go into the details of what we are doing here– we will cover that during the workshop– but for now, trust the process."
+  },
+  {
+    "objectID": "getting_started/testlink.html#create-a-repo",
+    "href": "getting_started/testlink.html#create-a-repo",
+    "title": "Test Connection",
+    "section": "Create a Repo",
+    "text": "Create a Repo\n\nLog in to your GitHub account and click  on the left hand side of the home page.\nName your repo, provide a brief description, check “Add a README file,” and then click\n\nClick  and copy the “HTTPS” link"
+  },
+  {
+    "objectID": "getting_started/testlink.html#clone-your-repo",
+    "href": "getting_started/testlink.html#clone-your-repo",
+    "title": "Test Connection",
+    "section": "Clone your Repo",
+    "text": "Clone your Repo\n\nOpen RStudio and create a new project: File -> New Project… -> Version Control -> Git\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nError: RStudio can’t find Git\n\n\n\nDon’t see an option for Version Control? Jenny Bryan has a useful guide for troubleshooting just this!\n\n\n\nPaste the link you copied from GitHub in the Repository URL field. The Project directory name fill will be automatically populated with the name of your Repo on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named “github” (~/github). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials.\n\n\n\n\n\n\n\nEntering Credentials\n\n\n\nRemember: whenever you are prompted to enter your GitHub password enter your PAT."
+  },
+  {
+    "objectID": "getting_started/testlink.html#check-connection",
+    "href": "getting_started/testlink.html#check-connection",
+    "title": "Test Connection",
+    "section": "Check connection",
+    "text": "Check connection\nYou should now see a new Git tab in the “environment panel” in RStudio and a couple of new files in your project folder. To make sure everything is set up correctly and you can communicate with GitHub, we will “commit” our first change.\n\nNavigate to the project you just created in RStudio, open the README.md file, make a minor edit, and save your changes.\nYou should now see README.md in the Git tab\n\nCheck the Staged box next to REARME.md. Click  and then \nIn the window that popped up, type “update readme” in the commit box and hit commit\n\nA status window will open. If there are no errors, hit the close button and then \nOpen the repo on GitHub and check that your edits were made by looking at the README.md file.\n\n\n\n\n\n\n\nErrors and unexpected behavior\n\n\n\nIf you experience any problems with this step check Jenny Bryan’s troubleshooting guide."
   },
   {
     "objectID": "getting_started/installation.html",
@@ -66,14 +87,14 @@
     "objectID": "getting_started/installation.html#install-git",
     "href": "getting_started/installation.html#install-git",
     "title": "Installation",
-    "section": "Install Git",
-    "text": "Install Git\nIf you do not have a current version of R or RStudio, install those first from here and here. If you already have the R and RStudio installed, consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:\n\nR.version.string\n\n[1] \"R version 4.2.2 Patched (2022-11-10 r83330)\"\n\n\nThere are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I’ll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want more information, give Happy Git a visit.\nBefore trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., Terminal, Command Prompt) and type:\n\ngit --version\n\nIf you have Git installed, congratulations, you can skip to the next section.\n\nWindows\nInstall Git for Windows.\n\n\nMac\nInstall Git via the XCode command line tools by running\n\ngit --verion\ngit config\n\nor by directly installing the XCode tools\n\nxcode-select --install\n\n\n\nLinux\n\nUbuntu/Debian\n\nsudo apt install git\n\n\n\nFedora/Red Hat\n\nsudo yum install git"
+    "section": "2 Install Git",
+    "text": "2 Install Git\nIf you do not have a current version of R or RStudio, install those first from here and here. If you already have the R and RStudio installed, consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:\n\nR.version.string\n\n[1] \"R version 4.2.2 Patched (2022-11-10 r83330)\"\n\n\nThere are many options for installing Git. The following are just the most recommended and (generally) easiest options. Again, I’ll rely on Jenny Bryan to pick up my slack here. For alternative installation methods, or if you want more information, give Happy Git a visit.\nBefore trying to install Git, check to see if you already have it installed. Start by opening your flavor of shell (e.g., Terminal, Command Prompt) and type:\n\ngit --version\n\nIf you have Git installed, congratulations, you can skip to Section 3.\n\n2.1 Windows\nInstall Git for Windows.\n\n\n2.2 Mac\nInstall Git via the XCode command line tools by running\n\ngit --verion\ngit config\n\nor by directly installing the XCode tools\n\nxcode-select --install\n\n\n\n2.3 Linux\n\n2.3.1 Ubuntu/Debian\n\nsudo apt install git\n\n\n\n2.3.2 Fedora/Red Hat\n\nsudo yum install git"
   },
   {
-    "objectID": "getting_started/installation.html#link-git-to-r",
-    "href": "getting_started/installation.html#link-git-to-r",
+    "objectID": "getting_started/installation.html#sec-linking",
+    "href": "getting_started/installation.html#sec-linking",
     "title": "Installation",
-    "section": "Link Git to R",
-    "text": "Link Git to R\nThe R package usethis allows us to configure Git in R. Install usethis if you have not already and set your Git credentials using the same username and email you used to create your GitHub account.\n\ninstall.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"username\", user.email = \"email@cornell.edu\")"
+    "section": "3 Link Git to R",
+    "text": "3 Link Git to R\nThe R package usethis allows us to configure Git in R. Install usethis if you have not already and set your Git credentials using the same username and email you used to create your GitHub account.\n\ninstall.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"username\", user.email = \"email@cornell.edu\")"
   }
 ]

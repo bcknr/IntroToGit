@@ -2,6 +2,7 @@
 title: "Installation"
 format: html
 editor: visual
+number-sections: true
 ---
 
 ## Create a GitHub Account
@@ -25,7 +26,7 @@ Before trying to install Git, check to see if you already have it installed. Sta
 git --version
 ```
 
-If you have Git installed, congratulations, you can skip to the [next](pat.qmd) section.
+If you have Git installed, congratulations, you can skip to @sec-linking.
 
 ### Windows
 
@@ -64,7 +65,7 @@ sudo apt install git
 sudo yum install git
 ```
 
-## Link Git to R
+## Link Git to R {#sec-linking}
 
 The R package `usethis` allows us to configure Git in R. Install `usethis` if you have not already and set your Git credentials using the **same** username and email you used to create your GitHub account.
 

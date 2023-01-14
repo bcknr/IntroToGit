@@ -185,6 +185,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../getting_started/testlink.html" class="sidebar-item-text sidebar-link">Test Connection</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../getting_started/questions.html" class="sidebar-item-text sidebar-link">Questions?</a>
   </div>
 </li>
@@ -199,14 +204,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link active" data-scroll-target="#create-a-github-account">Create a GitHub Account</a></li>
-  <li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git">Install Git</a>
+  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link active" data-scroll-target="#create-a-github-account"><span class="toc-section-number">1</span>  Create a GitHub Account</a></li>
+  <li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git"><span class="toc-section-number">2</span>  Install Git</a>
   <ul class="collapse">
-  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
-  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac">Mac</a></li>
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a></li>
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows"><span class="toc-section-number">2.1</span>  Windows</a></li>
+  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac"><span class="toc-section-number">2.2</span>  Mac</a></li>
+  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux"><span class="toc-section-number">2.3</span>  Linux</a></li>
   </ul></li>
-  <li><a href="#link-git-to-r" id="toc-link-git-to-r" class="nav-link" data-scroll-target="#link-git-to-r">Link Git to R</a></li>
+  <li><a href="#sec-linking" id="toc-sec-linking" class="nav-link" data-scroll-target="#sec-linking"><span class="toc-section-number">3</span>  Link Git to R</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -230,12 +235,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="create-a-github-account" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-github-account">Create a GitHub Account</h2>
+<section id="create-a-github-account" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="create-a-github-account"><span class="header-section-number">1</span> Create a GitHub Account</h2>
 <p>Create a free account at <a href="https://github.com">github.com</a>. Take time to consider your username– here is some helpful <a href="https://happygitwithr.com/github-acct.html#username-advice">advice</a>.</p>
 </section>
-<section id="install-git" class="level2">
-<h2 class="anchored" data-anchor-id="install-git">Install Git</h2>
+<section id="install-git" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="install-git"><span class="header-section-number">2</span> Install Git</h2>
 <p>If you do not have a current version of R or RStudio, install those first from <a href="https://cloud.r-project.org/">here</a> and <a href="https://posit.co/download/rstudio-desktop/">here</a>. If you already have the R and RStudio installed, consider updating to the most recent versions so we can more easily troubleshoot during the workshop. You can see the version I am using and how to check your current version below:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>R.version.string</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -248,13 +253,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If you have Git installed, congratulations, you can skip to the <a href="../getting_started/pat.html">next</a> section.</p>
-<section id="windows" class="level3">
-<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>If you have Git installed, congratulations, you can skip to <a href="#sec-linking">Section&nbsp;3</a>.</p>
+<section id="windows" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="windows"><span class="header-section-number">2.1</span> Windows</h3>
 <p>Install <a href="https://gitforwindows.org/">Git for Windows</a>.</p>
 </section>
-<section id="mac" class="level3">
-<h3 class="anchored" data-anchor-id="mac">Mac</h3>
+<section id="mac" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="mac"><span class="header-section-number">2.2</span> Mac</h3>
 <p>Install Git via the XCode command line tools by running</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--verion</span></span>
@@ -265,24 +270,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="linux" class="level3">
-<h3 class="anchored" data-anchor-id="linux">Linux</h3>
-<section id="ubuntudebian" class="level4">
-<h4 class="anchored" data-anchor-id="ubuntudebian">Ubuntu/Debian</h4>
+<section id="linux" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="linux"><span class="header-section-number">2.3</span> Linux</h3>
+<section id="ubuntudebian" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="ubuntudebian"><span class="header-section-number">2.3.1</span> Ubuntu/Debian</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="fedorared-hat" class="level4">
-<h4 class="anchored" data-anchor-id="fedorared-hat">Fedora/Red Hat</h4>
+<section id="fedorared-hat" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="fedorared-hat"><span class="header-section-number">2.3.2</span> Fedora/Red Hat</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> yum install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 </section>
-<section id="link-git-to-r" class="level2">
-<h2 class="anchored" data-anchor-id="link-git-to-r">Link Git to R</h2>
+<section id="sec-linking" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-linking"><span class="header-section-number">3</span> Link Git to R</h2>
 <p>The R package <code>usethis</code> allows us to configure Git in R. Install <code>usethis</code> if you have not already and set your Git credentials using the <strong>same</strong> username and email you used to create your GitHub account.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
