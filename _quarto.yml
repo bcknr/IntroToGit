@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Basics of Git and Github in R"
+  title: "Introduction to Git and Github with RStudio"
   repo-url: https://github.com/bcknr/IntroToGit
   repo-actions: issue
   page-navigation: true

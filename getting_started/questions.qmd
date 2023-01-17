@@ -3,7 +3,7 @@ title: "Questions?"
 editor: visual
 ---
 
-If you have questions or get stuck at any point create an issue by clicking ["Report and Issue"](https://github.com/bcknr/IntroToGit/issues/new) on the right of every page. Note: a GitHub account is required to submit an issue.
+If you have questions or get stuck at any point create an issue by clicking ["Report an Issue"](https://github.com/bcknr/IntroToGit/issues/new) on the right of every page. Note: a GitHub account is required to submit an issue.
 
 I encourage everyone to keep tabs on the [issues](https://github.com/bcknr/IntroToGit/issues) in the workshop's repo and answer each others questions! Feel free to use this as a place to work together as you continue to learn Git and GitHub.
 

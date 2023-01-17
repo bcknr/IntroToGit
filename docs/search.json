@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "This introductory workshop will cover the fundamentals of using Git and GitHub in Rstudio. With such a short workshop, I will only be able to get you started on your Git journey, but at the end, you should have a general workflow to start using Git in your research. We’ll learn how to install and link Git to Rstudio, create and clone a GitHub repo, practice the “pull - commit - push” process, and explore how Git can help you recover from programming disasters. Throughout, I’ll provide some tips for collaborating with others and increasing the reproducibility of your analyses.\n\n\n\n\n\n\nNote\n\n\n\nThis website will continue to be updated right up to the workshop. Check back for changes and updates. And feel free to ignore my typos. They will go away eventually.\n\n\n\nPre-workshop Homework\nInstalling and configuring Git and GitHub be finicky. To give us as much time as possible and to ensure that we all start on the right foot, please work through “Getting Started” prior to attending the workshop.\n\nFurther Reading:\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”. As you continue learning to use Git, keep this resource close by."
+    "text": "This introductory workshop will cover the fundamentals of using Git and GitHub in Rstudio. With such a short workshop, I will only be able to get you started with using Git, but at the end, you should have a general workflow to start using Git in your research. We’ll learn how to install and link Git to Rstudio, create and clone a GitHub repo, practice the “pull - commit - push” process, and explore how Git can help you recover from programming disasters. Throughout, I’ll provide some tips for collaborating with others and increasing the reproducibility of your analyses.\n\nPre-workshop Homework\nInstalling and configuring Git and GitHub be finicky. To give us as much time as possible and to ensure that we all start on the right foot, please work through “Getting Started” prior to attending the workshop.\n\nFurther Reading:\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”. As you continue learning to use Git, keep this resource close by."
   },
   {
     "objectID": "about.html",
@@ -18,7 +18,7 @@
     "href": "getting_started/questions.html",
     "title": "Questions?",
     "section": "",
-    "text": "If you have questions or get stuck at any point create an issue by clicking “Report and Issue” on the right of every page. Note: a GitHub account is required to submit an issue.\nI encourage everyone to keep tabs on the issues in the workshop’s repo and answer each others questions! Feel free to use this as a place to work together as you continue to learn Git and GitHub."
+    "text": "If you have questions or get stuck at any point create an issue by clicking “Report an Issue” on the right of every page. Note: a GitHub account is required to submit an issue.\nI encourage everyone to keep tabs on the issues in the workshop’s repo and answer each others questions! Feel free to use this as a place to work together as you continue to learn Git and GitHub."
   },
   {
     "objectID": "getting_started/questions.html#what-are-issues",
