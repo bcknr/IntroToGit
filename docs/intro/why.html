@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Git and Github with RStudio - Test Connection</title>
+<title>Introduction to Git and Github with RStudio - Why?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../getting_started/questions.html" rel="next">
-<link href="../getting_started/pat.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +78,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Test Connection</h1>
+      <h1 class="quarto-secondary-nav-title">Why?</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,7 +129,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../getting_started/testlink.html" class="sidebar-item-text sidebar-link active">Test Connection</a>
+  <a href="../getting_started/testlink.html" class="sidebar-item-text sidebar-link">Test Connection</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -150,9 +148,14 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-a-repo" id="toc-create-a-repo" class="nav-link active" data-scroll-target="#create-a-repo">Create a Repo</a></li>
-  <li><a href="#clone-your-repo" id="toc-clone-your-repo" class="nav-link" data-scroll-target="#clone-your-repo">Clone your Repo</a></li>
-  <li><a href="#check-connection" id="toc-check-connection" class="nav-link" data-scroll-target="#check-connection">Check connection</a></li>
+  <li><a href="#why-should-you-use-gitgithub" id="toc-why-should-you-use-gitgithub" class="nav-link active" data-scroll-target="#why-should-you-use-gitgithub">Why should you use Git/GitHub?</a>
+  <ul class="collapse">
+  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version Control</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
+  <li><a href="#sharing-research" id="toc-sharing-research" class="nav-link" data-scroll-target="#sharing-research">Sharing Research</a></li>
+  <li><a href="#recover-from-mistakes" id="toc-recover-from-mistakes" class="nav-link" data-scroll-target="#recover-from-mistakes">Recover from mistakes</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -161,7 +164,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Test Connection</h1>
+<h1 class="title d-none d-lg-block">Why?</h1>
 </div>
 
 
@@ -176,100 +179,25 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 
 </header>
 
-<p>Lastly, we will check that our set-up worked by creating a new git repository. I won’t go into the details of what we are doing here– we will cover that during the workshop– but for now, trust the process.</p>
-<section id="create-a-repo" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-repo">Create a Repo</h2>
-<ol type="1">
-<li><p>Log in to your <a href="https://github.com/">GitHub</a> account and click <img src="../images/new.png" class="img-fluid" width="69" alt="green new repo button"> on the left hand side of the home page.</p></li>
-<li><p>Name your repo, provide a brief description, check “Add a README file,” and then click<img src="../images/createrepo.png" class="img-fluid" width="120"></p>
-<p><img src="../images/newrepo.png" class="img-fluid"></p></li>
-<li><p>Click <img src="../images/code.png" class="img-fluid" width="86"> and copy the “HTTPS” link</p>
-<p><img src="../images/clone.png" class="img-fluid" width="400"></p></li>
-</ol>
+<section id="why-should-you-use-gitgithub" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-you-use-gitgithub">Why should you use Git/GitHub?</h2>
+<section id="collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
 </section>
-<section id="clone-your-repo" class="level2">
-<h2 class="anchored" data-anchor-id="clone-your-repo">Clone your Repo</h2>
-<ol type="1">
-<li>Open RStudio and create a new project: <code>File</code> -&gt; <code>New Project…</code> -&gt; <code>Version Control</code> -&gt; <code>Git</code></li>
-</ol>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="../images/newproj1.png" class="img-fluid" width="417"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="../images/newproj2.png" class="img-fluid" width="417"></p>
-</div>
-</div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Error: RStudio can’t find Git
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Don’t see an option for <code>Version Control</code>? Jenny Bryan has a useful <a href="https://happygitwithr.com/rstudio-see-git.html#rstudio-see-git">guide</a> for troubleshooting just this!</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Paste the link you copied from GitHub in the <em>Repository URL</em> field. The <em>Project directory name</em> fill will be automatically populated with the name of your Repo on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named “github” (<code>~/github</code>). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials.</li>
-</ol>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Entering Credentials
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Remember: whenever you are prompted to enter your GitHub password enter your <strong>PAT</strong>.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="../images/username.png" class="img-fluid" width="250"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="../images/password.png" class="img-fluid" width="250"></p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section id="version-control" class="level3">
+<h3 class="anchored" data-anchor-id="version-control">Version Control</h3>
 </section>
-<section id="check-connection" class="level2">
-<h2 class="anchored" data-anchor-id="check-connection">Check connection</h2>
-<p>You should now see a new <em>Git</em> tab in the “environment panel” in RStudio and a couple of new files in your project folder. To make sure everything is set up correctly and you can communicate with GitHub, we will “commit” our first change.</p>
-<ol type="1">
-<li><p>Navigate to the project you just created in RStudio, open the <code>README.md</code> file, make a minor edit, and save your changes.</p></li>
-<li><p>You should now see <code>README.md</code> in the Git tab</p>
-<p><img src="../images/readme_git.png" class="img-fluid"></p></li>
-<li><p>Check the <em>Staged</em> box next to <code>REARME.md</code>. Click <img src="../images/pull.png" class="img-fluid" width="58"> and then <img src="../images/commit.png" class="img-fluid"></p></li>
-<li><p>In the window that popped up, type “update readme” in the <em>commit</em> box and hit commit</p>
-<p><img src="../images/commitwindow.png" class="img-fluid"></p></li>
-<li><p>A status window will open. If there are no errors, hit the close button and then <img src="../images/push.png" class="img-fluid"></p></li>
-<li><p>Open the repo on GitHub and check that your edits were made by looking at the README.md file.</p></li>
-</ol>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Errors and unexpected behavior
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you experience any problems with this step check Jenny Bryan’s troubleshooting <a href="https://happygitwithr.com/troubleshooting.html">guide</a>.</p>
-</div>
-</div>
+<section id="reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility">Reproducibility</h3>
+</section>
+<section id="sharing-research" class="level3">
+<h3 class="anchored" data-anchor-id="sharing-research">Sharing Research</h3>
+</section>
+<section id="recover-from-mistakes" class="level3">
+<h3 class="anchored" data-anchor-id="recover-from-mistakes">Recover from mistakes</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -406,18 +334,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../getting_started/pat.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Personal Access Token</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../getting_started/questions.html" class="pagination-link">
-        <span class="nav-page-text">Questions?</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

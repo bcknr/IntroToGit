@@ -19,5 +19,32 @@
   },
   "getting_started/testlink.qmd": {
     "testlink.html": "fd801f94"
+  },
+  "activities/workflow_act.qmd": {
+    "workflow_act.html": "b0c0c1e9"
+  },
+  "activities/recover_act.qmd": {
+    "recover_act.html": "cdeb4195"
+  },
+  "activities/create.qmd": {
+    "create.html": "b1ec00a1"
+  },
+  "activities/collab_act.qmd": {
+    "collab_act.html": "13f70d6f"
+  },
+  "intro/collab.qmd": {
+    "collab.html": "aafce9a8"
+  },
+  "intro/workflow.qmd": {
+    "workflow.html": "a8339157"
+  },
+  "intro/whatisgit.qmd": {
+    "whatisgit.html": "8f93fb93"
+  },
+  "intro/why.qmd": {
+    "why.html": "ab183269"
+  },
+  "intro/recover.qmd": {
+    "recover.html": "abb8b314"
   }
 }

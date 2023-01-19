@@ -1,0 +1,16 @@
+---
+title: "Why?"
+editor: visual
+---
+
+## Why should you use Git/GitHub?
+
+### Collaboration
+
+### Version Control
+
+### Reproducibility
+
+### Sharing Research
+
+### Recover from mistakes

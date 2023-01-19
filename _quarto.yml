@@ -23,19 +23,19 @@ website:
           - getting_started/pat.qmd
           - getting_started/testlink.qmd
           - getting_started/questions.qmd
-      - section: "Intro to Git/GitHub" 
-        contents:
-          - intro/whatisgit.qmd
-          - intro/why.qmd
-          - intro/workflow.qmd
-          - intro/collab.qmd
-          - intro/recover.qmd
-      - section: "Activities"
-        contents:
-          - activities/create.qmd
-          - activities/workflow_act.qmd
-          - activities/collab_act.qmd
-          - activities/recover_act.qmd
+      # - section: "Intro to Git/GitHub" 
+      #   contents:
+      #     - intro/whatisgit.qmd
+      #     - intro/why.qmd
+      #     - intro/workflow.qmd
+      #     - intro/collab.qmd
+      #     - intro/recover.qmd
+      # - section: "Activities"
+      #   contents:
+      #     - activities/create.qmd
+      #     - activities/workflow_act.qmd
+      #     - activities/collab_act.qmd
+      #     - activities/recover_act.qmd
         
 format:
   html:

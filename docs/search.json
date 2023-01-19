@@ -7,13 +7,6 @@
     "text": "This introductory workshop will cover the fundamentals of using Git and GitHub in Rstudio. With such a short workshop, I will only be able to get you started with using Git, but at the end, you should have a general workflow to start using Git in your research. We’ll learn how to install and link Git to Rstudio, create and clone a GitHub repo, practice the “pull - commit - push” process, and explore how Git can help you recover from programming disasters. Throughout, I’ll provide some tips for collaborating with others and increasing the reproducibility of your analyses.\n\nPre-workshop Homework\nInstalling and configuring Git and GitHub be finicky. To give us as much time as possible and to ensure that we all start on the right foot, please work through “Getting Started” prior to attending the workshop.\n\nFurther Reading:\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”. As you continue learning to use Git, keep this resource close by."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "getting_started/questions.html",
     "href": "getting_started/questions.html",
     "title": "Questions?",
@@ -96,5 +89,33 @@
     "title": "Installation",
     "section": "3 Link Git to R",
     "text": "3 Link Git to R\nThe R package usethis allows us to configure Git in R. Install usethis if you have not already and set your Git credentials using the same username and email you used to create your GitHub account.\n\ninstall.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"username\", user.email = \"email@cornell.edu\")"
+  },
+  {
+    "objectID": "intro/workflow.html",
+    "href": "intro/workflow.html",
+    "title": "Workflow",
+    "section": "",
+    "text": "Pull commit push\nwhat to commit\n(gitignore)\n(too big of a file)\ncommit messages\nhow often\nFixing a broken commit"
+  },
+  {
+    "objectID": "intro/whatisgit.html",
+    "href": "intro/whatisgit.html",
+    "title": "What are Git and GitHub?",
+    "section": "",
+    "text": "If you have ever found your self appending _copy , _final , final_final_MAB BND copy1_v6_MAB, etc. to the end of your files you’ve tried extremely rudimentary and inelegant version control. The issue, beyond that you may never again know what the true final file was, is that it will be difficult or impossible to identify what changed between versions, who made those changes, or collaborate using the same version of a file.\n\n\n\n\n\n\nxkcd"
+  },
+  {
+    "objectID": "intro/whatisgit.html#git",
+    "href": "intro/whatisgit.html#git",
+    "title": "What are Git and GitHub?",
+    "section": "Git",
+    "text": "Git\nGit is a version control system that tracks changes in collections of files (repositories or “repos”) over time. Each repo is a self contained project allowing you to track changes to your project in a structured and organized way."
+  },
+  {
+    "objectID": "intro/whatisgit.html#github",
+    "href": "intro/whatisgit.html#github",
+    "title": "What are Git and GitHub?",
+    "section": "GitHub",
+    "text": "GitHub\nGitHub is an online host for your (and others) Git version controled repositories. It allows you to visualizes changes to your code and other non-code files."
   }
 ]

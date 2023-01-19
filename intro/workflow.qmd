@@ -1,0 +1,18 @@
+---
+title: "Workflow"
+editor: visual
+---
+
+Pull commit push
+
+what to commit
+
+(gitignore)
+
+(too big of a file)
+
+commit messages
+
+how often
+
+Fixing a broken commit
