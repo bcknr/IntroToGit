@@ -71,5 +71,4 @@ You should now see a new *Git* tab in the "environment panel" in RStudio and a c
 ## Errors and unexpected behavior
 
 If you experience any problems with this step check Jenny Bryan's troubleshooting [guide](https://happygitwithr.com/troubleshooting.html).
-
 :::

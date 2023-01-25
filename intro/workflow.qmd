@@ -1,18 +1,80 @@
 ---
-title: "Workflow"
+title: "A Basic Workflow"
 editor: visual
 ---
 
-Pull commit push
+## Create a Project
 
-what to commit
+The easiest and preferred way to create a new project using GitHub **first** (This is exactly what we did in ["Getting Started"](getting_started/testlink.qmd)).
+
+### Create a Repo
+
+1.  Log in to your [GitHub](https://github.com/) account and click ![green new repo button](/images/new.png){width="69"} on the left hand side of the home page.
+
+2.  Name your repo, provide a brief description, check "Add a README file," and then click![](/images/createrepo.png){width="120"}
+
+    ![](/images/newrepo.png)
+
+3.  Click ![](/images/code.png){width="86"} and copy the "HTTPS" link
+
+    ![](/images/clone.png){width="400"}
+
+### Clone your Repo
+
+1.  Open RStudio and create a new project: `File` -\> `New Project…` -\> `Version Control` -\> `Git`
+
+::: {layout-ncol="2"}
+![](/images/newproj1.png){width="417"}
+
+![](/images/newproj2.png){width="417"}
+:::
+
+2.  Paste the link you copied from GitHub in the *Repository URL* field. The *Project directory name* fill will be automatically populated with the name of your Repo on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named "github" (`~/github`). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials.
+
+## Pull-(work)-stage-commit-push
+
+The simplest workflow is to pull, stage, commit, and push. There are other methods, such as Jenny Bryan's [repeated amend](https://happygitwithr.com/repeated-amend.html#repeated-amend) workflow, that have some pros over this basic method, including the benefit of having many incremental steps to fall back on but I will leave those as additional reading.
+
+![https://nt246.github.io/NTRES6940-data-science/lesson4-collaboration.html](/images/commit_steps.png)
+
+### 1. Pull
+
+At the beginning of a session start by *Pulling* the most up to date versions from GitHub by clicking the blue pull arrow (![](/images/pull.png){width="46" height="18"}) in the git tab of RStudio.
+
+If you already local changes and you pull it may be rejected or you might have merge the changes.
+
+The easiest option is to first commit your changes prior to trying to pull again. If you are lucky when you pull the files will be automatically merged. Otherwise, you will need to merge the changes by deciding which one (or hybrid of the two) conflicting version to keep.
+
+### 2. Work
+
+Code away.
+
+### 3. Stage
+
+Once you are ready to commit your changes, click the checkbox next to the files you want to commit.
+
+![](images/image-1684840014.png)
+
+### 4. Commit
+
+Click on the commit (![](/images/commit.png){width="50"}) button and write a concise but informative description of the work you did or changes you made and then hit commit.
+
+### 5. Push
+
+Click on the push button (![](/images/push.png){width="47"}) to send your changes to our GitHub repo.
+
+### Collaborating 
+
+If you are doing a lot of collaboration it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each others toes or work on part of a project without worrying too much about breaking the whole thing. Once you are satisfied with how the branch is performing you can merge your branch with the main branch.
+
+## What to commit?
 
 (gitignore)
 
 (too big of a file)
 
-commit messages
+## commit messages
 
-how often
+## how often
 
-Fixing a broken commit
+## Fixing a broken commit

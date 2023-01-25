@@ -1,16 +1,41 @@
 ---
-title: "Why?"
+title: "Why should you use Git/GitHub?"
 editor: visual
+number-sections: true
 ---
 
-## Why should you use Git/GitHub?
+### Collaboration and Version Control
 
-### Collaboration
+Git allows you to keep track of all the versions of your analysis and track changes even when all your collaborators are working on different computers. For massive collaborative projects, like the `dplyr` package with over 250 contributors, the utility of Git based version control might be obvious.
 
-### Version Control
+![](/images/commits.png){width="771"}
 
-### Reproducibility
+But even for smaller projects (or if you work alone) there are benefits to avoiding the "file renaming" method, for example:
 
-### Sharing Research
+-   Everyone can always works on the same version of the analysis asychronously
+
+    [![https://doi.org/10.1186/1751-0473-8-7](/images/colabworkflow.png)](https://doi.org/10.1186/1751-0473-8-7)
+
+-   You can see the what you changed between two versions by looking at the "diff", even years later
+
+    ![](/images/diff.png)
+
+-   Changes can be tracked using "commits" allowing you to see who changed what (and when)
+
+-   If you make a mistake and break your code you can revert to the last working version
+
+    -   Or you can try something new without fearing destroying all of your past work
+
+-   Combine organizing and sharing your work into your daily workflow
+
+-   Make revisiting your code easier for future you
+
+### Reproducibility and Sharing
+
+We make any small decisions during data analysis which can have significant impacts on the outcome of an analysis and often these choices are left out of the methods sections of publications. Hosting your work on GitHub in a public repository provides an line for line method for your analysis which can be reviewed by others interested in your work or looking to use similar methods.
+
+#### Forks
+
+#### Quatro websites
 
 ### Recover from mistakes

@@ -5,7 +5,7 @@ editor: visual
 
 ## The problem:
 
-If you have ever found your self appending `_copy` , `_final` , `final_final_MAB BND copy1_v6_MAB`, etc. to the end of your files you've tried extremely rudimentary and inelegant version control. The issue, beyond that you may never again know what the true final file was, is that it will be difficult or impossible to identify what changed between versions, who made those changes, or collaborate using the same version of a file.
+If you have ever found your self appending `_copy` , `_final` , `final_final_MAB XYZ copy1_v6_MAB`, etc. to the end of your files you've tried rudimentary and inelegant version control. The issue, beyond that you may never again know what the actual final file was, is that it will be difficult or impossible to identify what changed between versions, who made those changes, or collaborate using the same version of a file.BND
 
 ::: {layout-ncol="2"}
 ![xkcd](../images/xkcd_filenames.png)
@@ -15,8 +15,18 @@ If you have ever found your self appending `_copy` , `_final` , `final_final_MAB
 
 ## Git
 
-Git is a version control system that tracks changes in collections of files (**repositories** or "repos") over time. Each repo is a self contained project allowing you to track changes to your project in a structured and organized way.
+Git is a version control system that tracks changes in collections of files (**repositories** or "repos") over time. Each repo is a self contained project allowing you to track changes to your project in a structured and organized way. It functions similarly to a Google Doc but for code.
 
 ## GitHub
 
-GitHub is an online host for your (and others) Git version controled repositories. It allows you to visualizes changes to your code and other [non-code](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files) files.
+GitHub is an online host for your (and others) Git version controlled repositories. It allows you to
+
+-   visualize changes to your code and other [non-code](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files) files,
+
+-   store your files backed-up online,
+
+-   collaborate and share with others, and
+
+-   keep track of bugs and to-dos.
+
+![](/images/gitRepo.png)
