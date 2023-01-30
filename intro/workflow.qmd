@@ -5,7 +5,7 @@ editor: visual
 
 ## Create a Project
 
-The easiest and preferred way to create a new project using GitHub **first** (This is exactly what we did in ["Getting Started"](getting_started/testlink.qmd)).
+The easiest and preferred way to create a new project using GitHub **first** (this is exactly what we did in ["Getting Started"](../getting_started/testlink.qmd)).
 
 ### Create a Repo
 
@@ -63,18 +63,36 @@ Click on the commit (![](/images/commit.png){width="50"}) button and write a con
 
 Click on the push button (![](/images/push.png){width="47"}) to send your changes to our GitHub repo.
 
-### Collaborating 
+## Committing
 
-If you are doing a lot of collaboration it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each others toes or work on part of a project without worrying too much about breaking the whole thing. Once you are satisfied with how the branch is performing you can merge your branch with the main branch.
+### What to Commit?
 
-## What to commit?
+#### Yes:
 
-(gitignore)
+-   Code
 
-(too big of a file)
+-   Source files (including raw data if its not too large)
 
-## commit messages
+-   Configuration files (e.g. `.gitignore` and `****.Rproj`)
 
-## how often
+-   Figures, Rmarkdown files, reports, and other outputs
 
-## Fixing a broken commit
+-   etc.
+
+#### No:
+
+-   Large datasets
+
+-   Microsoft office documents can cause problems but `.csv` and `.tsv` files are okay
+
+#### Ignoring Files
+
+To tell git to ignore a file, add the path to the `.gitignore` file that was automatically created when you first created your version controlled R project.
+
+### How often should you commit?
+
+Often. Each new commit is your fall back if something goes wrong.
+
+### Commit Messages
+
+It's most helpful to think about what you did and write a very concise description. If you made many changes and can't summarize your changes and why concisely you probably need to commit more often.

@@ -2,3 +2,33 @@
 title: "Collaborating"
 editor: visual
 ---
+
+## Add a Collaborator
+
+You can add collaborators to a private (or public) repo in GitHub by clicking `settings` \> `Collaborators` \> `Add People`
+
+![](/images/addcollab.png){width="817"}
+
+If you are doing a lot of collaboration it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each others toes or work on part of a project without worrying too much about breaking the whole thing. Once you are satisfied with how the branch is performing you can merge your branch with the main branch.
+
+## Merge (and merge conflicts)
+
+## Forks
+
+GitHub allows you to get a copy of other public repositories. You can either clone the repo using the same method as you would for cloning your own or you can "fork and clone".
+
+Forking has the added benefit of allowing you to suggest changes to the repository owner (called "pull requests").
+
+To fork a repo...
+
+1.  Click on "Fork" in the top right when on the repo's main page
+
+    ![](/images/fork1.png)
+
+2.  Click "Create a new fork", and
+
+    ![](/images/fork2.png)
+
+3.  Update the information as you wish before clicking the big green button as usual.
+
+    ![](/images/fork3.png)

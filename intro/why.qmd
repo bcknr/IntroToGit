@@ -6,36 +6,56 @@ number-sections: true
 
 ### Collaboration and Version Control
 
-Git allows you to keep track of all the versions of your analysis and track changes even when all your collaborators are working on different computers. For massive collaborative projects, like the `dplyr` package with over 250 contributors, the utility of Git based version control might be obvious.
+Git allows you to keep track of all the versions of your analysis and track changes even when all your collaborators are working on different computers. For massive collaborative projects, like the `dplyr` package with over 250 contributors, the utility of Git-based version control might be apparent.
 
 ![](/images/commits.png){width="771"}
 
-But even for smaller projects (or if you work alone) there are benefits to avoiding the "file renaming" method, for example:
+But even for smaller projects (or if you work alone), there are benefits to avoiding the "file renaming" method, for example:
 
--   Everyone can always works on the same version of the analysis asychronously
+-   You can collaborate on the most up to date versions of the analysis asynchronously
 
     [![https://doi.org/10.1186/1751-0473-8-7](/images/colabworkflow.png)](https://doi.org/10.1186/1751-0473-8-7)
 
--   You can see the what you changed between two versions by looking at the "diff", even years later
+-   You can see what you changed, who made the change, and when between versions by looking at the "diff", even years later
 
     ![](/images/diff.png)
 
--   Changes can be tracked using "commits" allowing you to see who changed what (and when)
+-   If you make a mistake and break your code or want to try something new you can always revert to the last working version
 
--   If you make a mistake and break your code you can revert to the last working version
-
-    -   Or you can try something new without fearing destroying all of your past work
-
--   Combine organizing and sharing your work into your daily workflow
+-   It allows you to combine organizing and sharing your work into your daily workflow, and
 
 -   Make revisiting your code easier for future you
 
 ### Reproducibility and Sharing
 
+#### Reproducibility
+
 We make any small decisions during data analysis which can have significant impacts on the outcome of an analysis and often these choices are left out of the methods sections of publications. Hosting your work on GitHub in a public repository provides an line for line method for your analysis which can be reviewed by others interested in your work or looking to use similar methods.
 
-#### Forks
+#### Sharing
 
-#### Quatro websites
+GitHub provides great options for hosting and sharing your research. (This is a not an exhaustive list)
+
+-   GitHub Markdown Documents: I've used this in the past for Knit Rmarkdown files (It's not the cleanest approach but here is an [example](https://github.com/bcknr/Andrena_asteris_SDM/blob/main/R/Aa_SDM.md) from a recent project)
+
+    ![](/images/gitmarkdown.png)
+
+-   Websites
+
+    -   [Quarto](https://quarto.org/) - This website was made with Quarto
+
+        ![](/images/website.png)
+
+    -   [pkgdown](https://pkgdown.r-lib.org/)
+
+    -   Other [GitHub Pages](https://pages.github.com/) options
+
+-   Books/reports
+
+    -   [Bookdown](https://bookdown.org/)
+
+    -   Quarto
 
 ### Recover from mistakes
+
+See the section on [recovering from mistakes](../intro/recover.qmd).
