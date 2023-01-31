@@ -1,5 +1,5 @@
 ---
-title: "Collaborating"
+title: "Collaborate"
 editor: visual
 ---
 
@@ -11,7 +11,93 @@ You can add collaborators to a private (or public) repo in GitHub by clicking `s
 
 If you are doing a lot of collaboration it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each others toes or work on part of a project without worrying too much about breaking the whole thing. Once you are satisfied with how the branch is performing you can merge your branch with the main branch.
 
-## Merge (and merge conflicts)
+## Merging (and merge conflicts)
+
+If you are collaborating with someone else and are both working on the same file you could you will need to merge your edits when committing and pushing the file to GitHub. Best case scenario, you both edited different lines and the files can be merged automatically.
+
+![](/images/automerge.png)
+
+If not, you will have to merge the files manually. All this means is that you will need to pick which changes to keep.
+
+### Pulling changes with an uncommitted file
+
+If you practice the "pull-stage-commit-push" workflow I've preached up to this point you'll hit a snag when you try to pull the new changes if you made edits.
+
+![](/images/pullfail.png)
+
+Notice that the error message tells you to commit or "stash" your changes. We won't cover stashing changes here. So lets stage and commit our changes before trying again.
+
+![](/images/commitsuccess.png)
+
+Great, I was able to commit without issue!
+
+### Pushing changes with a committed file
+
+What happen when I try to push my changes?
+
+![](/images/pushfail.png)
+
+Not much, the push to GitHub was rejected because "the tip of my branch is behind." All this means is that there have been changes to the files since I last successfully pulled. Luckily, you should be able to see from the hints and your Git vocab that all we have to do is "pull" before pushing.
+
+![](/images/mergeconflict.png)
+
+Well, its a step in the right direction but we still haven't succeeded in pushing our changes to GitHub. You'll notice that the automatic merge failed in this instance because my collaborator and I edited the same line of code. Lets resolve the conflict.
+
+```{r}
+#| eval: false
+
+# Load Iris dataset and ggplot2
+library(datasets)
+library(ggplot2)
+data("iris")
+
+# Plot
+plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 2) +
+  geom_smooth() +
+  xlab("Sepal Length") +
+  ylab("Sepal Width") +
+<<<<<<< HEAD
+  scale_color_manual(values = c("olivedrab4", "aquamarine4", "burlywood2")) +
+=======
+  scale_color_manual(values = c("aquamarine", "aquamarine4", "darkcyan")) +
+>>>>>>> 266103a4df6f7613c11d8d5b6070d34db3fa9e79
+  theme_bw()
+  
+plot
+```
+
+Both my collaborator and my changes are now show in the editor. They are bracketed by "version control conflict markers" which are `<<<<<<< HEAD` and `>>>>>>> 266103a4df6f7613c11d8d5b6070d34db3fa9e79`. The long string of letters and numbers is just a hash identifying the commit and the `=======` separates the two different versions, so I need to either pick one or figure out how to combine them.
+
+In this case my version of a bad color palette is clearly better. So lets delete my collaborators code and the other text.
+
+```{r}
+# Load Iris dataset and ggplot2
+library(datasets)
+library(ggplot2)
+data("iris")
+
+# Plot
+plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 2) +
+  geom_smooth() +
+  xlab("Sepal Length") +
+  ylab("Sepal Width") +
+  scale_color_manual(values = c("olivedrab4", "aquamarine4", "burlywood2")) +
+  theme_bw()
+  
+plot
+```
+
+That looks much better. Now that I have resolved the merge conflict, I will commit my changes once again this time adding a commit message explaining the merge and then push my changes.
+
+Resolving merge conflicts can be annoying. Which is why I highly recommend you learn about branches if you collaborate with others. Branches don't remove all merge conflicts but allow you to handle them through "Pull Requests" when you have time. Unfortunately we have a limited amount of time today so you will have to read up on this on your own.
+
+::: callout-tip
+## Messed up your commit?
+
+Remember, if you put `git reset HEAD~1` into the terminal it will reset your last commit. Be careful when using this!
+:::
 
 ## Forks
 

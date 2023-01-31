@@ -1,4 +1,69 @@
 ---
 title: "Collaborate"
 editor: visual
+number-sections: true
 ---
+
+Working with a partner we will practice collaborating with with others. On GitHub I have a created a [repo](https://github.com/bcknr/IntroToGit_Activity) for this activity.
+
+## Fork the `IntroToGit_Activity` repo
+
+Working on one computer navigate to the [repo created for this activity](https://github.com/bcknr/IntroToGit_Activity) and fork the repo. The person who's computer you are working on will be "partner 1" for the remainder of this activity.
+
+## Add a collaborator
+
+Add your partner as a collaborator to the forked repo using their GitHub username.
+
+## Clone the Repo
+
+Now each working on your own, follow the steps to clone the repo to your machine.
+
+## Explore the Code
+
+In the new project open the file named `script.R`. Get in the habit of making sure you're working on the most up to date version by pulling any changes before you dive into the code.
+
+You'll note that the code is to create a horribly colored plot of `Sepal.Length` vs `Sepal.Width` data from `iris` dataset. It may also look familiar from our discussion of merge conflicts (foreshadowing).
+
+```{r}
+# Load Iris dataset and ggplot2
+library(datasets)
+library(ggplot2)
+data("iris")
+
+# Plot
+plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 2) +
+  geom_smooth() +
+  xlab("Sepal Length") +
+  ylab("Sepal Width") +
+  scale_color_manual(values = c("tan", "wheat", "burlywood2")) +
+  theme_bw()
+  
+plot
+```
+
+## Modify the code
+
+### Without a conflict...
+
+Each partner should then edit a unique part of the code.
+
+Partner 1 - Add your name or a comment to line 6 (`# Partner 1:`)
+
+Partner 2 - Add your name or a comment to line 8 (`# Partner 2:`)
+
+Now that both of you have edited your file, partner 1 should stage, commit, and push their changes to github.
+
+Have partner two pull the new changes. What happens?
+
+Resolve the error message (see the [step-by-step](../intro/collab.qmd) if you can't figure out how) and try pushing your changes again. Was it successful? What does the message mean?
+
+### With a conflict...
+
+Now that we have successfully experienced the joys of an automatic merge we will force a conflict. **Without** consulting with your partner each of you should choose a new color palette for this figure by changing the names in `scale_color_manual()` and save the changes.
+
+Have one partner stage, commit, and push their changes first. Once they are done have the other partner try pulling the changes. Was it successful?
+
+Following the error message we should first try committing the change and then pull again. This will create a merge conflict.
+
+Work with your partner to resolve the conflict, commit the resolution, and push the resolved changes.

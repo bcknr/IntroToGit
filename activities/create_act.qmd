@@ -2,3 +2,12 @@
 title: "Create a Repo"
 editor: visual
 ---
+
+Creating a repo was one of the first thing you did with GitHub. Now that you have more information on each step of the process, try to create a new repo (named whatever you would like) and make sure you can push changes from RStudio.
+
+::: {.callout-tip collapse="true"}
+## Stuck?
+
+Review the step by step process on the ["Getting Started"](../getting_started/testlink.qmd) page or the ["workflow"](../intro/workflow.qmd) page.
+
+:::
