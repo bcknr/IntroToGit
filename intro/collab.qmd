@@ -9,11 +9,11 @@ You can add collaborators to a private (or public) repo in GitHub by clicking `s
 
 ![](/images/addcollab.png){width="817"}
 
-If you are doing a lot of collaboration it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each others toes or work on part of a project without worrying too much about breaking the whole thing. Once you are satisfied with how the branch is performing you can merge your branch with the main branch.
+If you are doing a lot of collaboration, it will benefit you to learn about [branches](https://happygitwithr.com/git-branches.html#git-branches). These allow you to work collaboratively without always stepping on each other's toes or work on the part of a project without worrying too much about breaking the whole thing. Once satisfied with how the branch performs, you can merge it with the main branch.
 
 ## Merging (and merge conflicts)
 
-If you are collaborating with someone else and are both working on the same file you could you will need to merge your edits when committing and pushing the file to GitHub. Best case scenario, you both edited different lines and the files can be merged automatically.
+If you are collaborating with someone else and are both working on the same file, you may need to merge your edits when committing and pushing the file to GitHub. In the best-case scenario, you both edited different lines, and the files can be merged automatically.
 
 ![](/images/automerge.png)
 
@@ -21,27 +21,27 @@ If not, you will have to merge the files manually. All this means is that you wi
 
 ### Pulling changes with an uncommitted file
 
-If you practice the "pull-stage-commit-push" workflow I've preached up to this point you'll hit a snag when you try to pull the new changes if you made edits.
+If you practice the "pull-stage-commit-push" workflow I've promoted up to this point, you'll hit a snag when you try to pull the new changes if you made edits.
 
 ![](/images/pullfail.png)
 
-Notice that the error message tells you to commit or "stash" your changes. We won't cover stashing changes here. So lets stage and commit our changes before trying again.
+Notice that the error message tells you to commit or "stash" your changes. We won't cover stashing changes here. So let's stage and commit our changes before trying again.
 
 ![](/images/commitsuccess.png)
 
-Great, I was able to commit without issue!
+Great, there were no errors committing. But what if we try to push our changes?
 
 ### Pushing changes with a committed file
 
-What happen when I try to push my changes?
+If there are new changes to the file you are working on GitHub that aren't reflected in your local repo pushing your changes may result in an error.
 
 ![](/images/pushfail.png)
 
-Not much, the push to GitHub was rejected because "the tip of my branch is behind." All this means is that there have been changes to the files since I last successfully pulled. Luckily, you should be able to see from the hints and your Git vocab that all we have to do is "pull" before pushing.
+Why? The push to GitHub was rejected because "the tip of my branch is behind." All this means is that there have been changes to the files since I last successfully pulled. Luckily, you should be able to see from the hints and your Git vocab that all we have to do is "pull" before pushing.
 
 ![](/images/mergeconflict.png)
 
-Well, its a step in the right direction but we still haven't succeeded in pushing our changes to GitHub. You'll notice that the automatic merge failed in this instance because my collaborator and I edited the same line of code. Lets resolve the conflict.
+Well, its a step in the right direction, but we still haven't succeeded in pushing our changes to GitHub. You'll notice that the automatic merge failed because my collaborator and I edited the **same** line of code. Let's resolve the conflict.
 
 ```{r}
 #| eval: false
@@ -69,7 +69,7 @@ plot
 
 Both my collaborator and my changes are now show in the editor. They are bracketed by "version control conflict markers" which are `<<<<<<< HEAD` and `>>>>>>> 266103a4df6f7613c11d8d5b6070d34db3fa9e79`. The long string of letters and numbers is just a hash identifying the commit and the `=======` separates the two different versions, so I need to either pick one or figure out how to combine them.
 
-In this case my version of a bad color palette is clearly better. So lets delete my collaborators code and the other text.
+In this case my version of a bad color palette is clearly better. So lets delete my collaborators code and all of the conflict markers.
 
 ```{r}
 # Load Iris dataset and ggplot2
@@ -89,23 +89,17 @@ plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 plot
 ```
 
-That looks much better. Now that I have resolved the merge conflict, I will commit my changes once again this time adding a commit message explaining the merge and then push my changes.
+That looks much better. Now that I have resolved the merge conflict, I will commit my changes again, this time adding a commit message explaining the merge and then pushing my changes.
 
-Resolving merge conflicts can be annoying. Which is why I highly recommend you learn about branches if you collaborate with others. Branches don't remove all merge conflicts but allow you to handle them through "Pull Requests" when you have time. Unfortunately we have a limited amount of time today so you will have to read up on this on your own.
-
-::: callout-tip
-## Messed up your commit?
-
-Remember, if you put `git reset HEAD~1` into the terminal it will reset your last commit. Be careful when using this!
-:::
+Resolving merge conflicts can be annoying. I highly recommend you learn about branches if you collaborate with others. Branches don't remove all merge conflicts but allow you to handle them through "Pull Requests" when you have time. Unfortunately, we have a limited time today, so you will have to read up on this on your own.
 
 ## Forks
 
-GitHub allows you to get a copy of other public repositories. You can either clone the repo using the same method as you would for cloning your own or you can "fork and clone".
+GitHub allows you to get a copy of other public repositories. You can clone the repo using the same method as you would for cloning your own or you can "fork and clone."
 
-Forking has the added benefit of allowing you to suggest changes to the repository owner (called "pull requests").
+Forking has the added benefit of allowing you to suggest changes to the repository owner (called "pull requests"), and enabling you to use the repo as if you created it.
 
-To fork a repo...
+To fork a repo
 
 1.  Click on "Fork" in the top right when on the repo's main page
 
