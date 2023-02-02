@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Git and Github with RStudio - Workflow</title>
+<title>Introduction to Git and Github with RStudio - A Basic Workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../intro/collab.html" rel="next">
+<link href="../intro/why.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -78,7 +80,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Workflow</h1>
+      <h1 class="quarto-secondary-nav-title">A Basic Workflow</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -139,19 +141,103 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro to Git/GitHub</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/whatisgit.html" class="sidebar-item-text sidebar-link">What are Git and GitHub?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/why.html" class="sidebar-item-text sidebar-link">Why should you use Git/GitHub?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/workflow.html" class="sidebar-item-text sidebar-link active">A Basic Workflow</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/collab.html" class="sidebar-item-text sidebar-link">Collaborate</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/recover.html" class="sidebar-item-text sidebar-link">‘Disaster’ Recovery</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Activities</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/create_act.html" class="sidebar-item-text sidebar-link">Create a Repo</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/collab_act.html" class="sidebar-item-text sidebar-link">Collaborate</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/recover_act.html" class="sidebar-item-text sidebar-link">Break it</a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#create-a-project" id="toc-create-a-project" class="nav-link active" data-scroll-target="#create-a-project">Create a Project</a>
+  <ul class="collapse">
+  <li><a href="#create-a-repo" id="toc-create-a-repo" class="nav-link" data-scroll-target="#create-a-repo">Create a Repo</a></li>
+  <li><a href="#clone-your-repo" id="toc-clone-your-repo" class="nav-link" data-scroll-target="#clone-your-repo">Clone your Repo</a></li>
+  </ul></li>
+  <li><a href="#pull-work-stage-commit-push" id="toc-pull-work-stage-commit-push" class="nav-link" data-scroll-target="#pull-work-stage-commit-push">Pull-(work)-stage-commit-push</a>
+  <ul class="collapse">
+  <li><a href="#pull" id="toc-pull" class="nav-link" data-scroll-target="#pull">1. Pull</a></li>
+  <li><a href="#work" id="toc-work" class="nav-link" data-scroll-target="#work">2. Work</a></li>
+  <li><a href="#stage" id="toc-stage" class="nav-link" data-scroll-target="#stage">3. Stage</a></li>
+  <li><a href="#commit" id="toc-commit" class="nav-link" data-scroll-target="#commit">4. Commit</a></li>
+  <li><a href="#push" id="toc-push" class="nav-link" data-scroll-target="#push">5. Push</a></li>
+  </ul></li>
+  <li><a href="#committing" id="toc-committing" class="nav-link" data-scroll-target="#committing">Committing</a>
+  <ul class="collapse">
+  <li><a href="#what-to-commit" id="toc-what-to-commit" class="nav-link" data-scroll-target="#what-to-commit">What to Commit?</a></li>
+  <li><a href="#how-often-should-you-commit" id="toc-how-often-should-you-commit" class="nav-link" data-scroll-target="#how-often-should-you-commit">How often should you commit?</a></li>
+  <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages">Commit Messages</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Workflow</h1>
+<h1 class="title d-none d-lg-block">A Basic Workflow</h1>
 </div>
 
 
@@ -166,15 +252,111 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 
 </header>
 
-<p>Pull commit push</p>
-<p>what to commit</p>
-<p>(gitignore)</p>
-<p>(too big of a file)</p>
-<p>commit messages</p>
-<p>how often</p>
-<p>Fixing a broken commit</p>
+<section id="create-a-project" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-project">Create a Project</h2>
+<p>The easiest and preferred way to create a new project is to use GitHub <strong>first</strong> (this is exactly what we did in <a href="../getting_started/testlink.html">“Getting Started”</a>).</p>
+<section id="create-a-repo" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-repo">Create a Repo</h3>
+<ol type="1">
+<li><p>Log in to your <a href="https://github.com/">GitHub</a> account and click <img src="../images/new.png" class="img-fluid" width="69" alt="green new repo button"> on the left hand side of the home page.</p></li>
+<li><p>Name your repo, provide a brief description, check “Add a README file,” and then click<img src="../images/createrepo.png" class="img-fluid" width="120"></p>
+<p><img src="../images/newrepo.png" class="img-fluid"></p></li>
+<li><p>Click <img src="../images/code.png" class="img-fluid" width="86"> and copy the “HTTPS” link</p>
+<p><img src="../images/clone.png" class="img-fluid" width="400"></p></li>
+</ol>
+</section>
+<section id="clone-your-repo" class="level3">
+<h3 class="anchored" data-anchor-id="clone-your-repo">Clone your Repo</h3>
+<ol type="1">
+<li>Open RStudio and create a new project: <code>File</code> -&gt; <code>New Project…</code> -&gt; <code>Version Control</code> -&gt; <code>Git</code></li>
+</ol>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../images/newproj1.png" class="img-fluid" width="417"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../images/newproj2.png" class="img-fluid" width="417"></p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Paste the link you copied from GitHub in the <em>Repository URL</em> field. The <em>Project directory name</em> fill will automatically be populated with your Repo’s name as it appears on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named “github” (<code>~/github</code>). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials.</li>
+</ol>
+</section>
+</section>
+<section id="pull-work-stage-commit-push" class="level2">
+<h2 class="anchored" data-anchor-id="pull-work-stage-commit-push">Pull-(work)-stage-commit-push</h2>
+<p>The simplest workflow is to pull, stage, commit, and push. Other methods, such as Jenny Bryan’s&nbsp;<a href="https://happygitwithr.com/repeated-amend.html#repeated-amend">repeated amend</a>&nbsp;workflow, have some pros over this basic method, including the benefit of having many incremental steps to fall back on, but I will leave those as additional reading.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/commit_steps.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">https://nt246.github.io/NTRES6940-data-science/lesson4-collaboration.html</figcaption><p></p>
+</figure>
+</div>
+<section id="pull" class="level3">
+<h3 class="anchored" data-anchor-id="pull">1. Pull</h3>
+<p>At the beginning of each session, start by <em>Pulling</em> the most up-to-date versions from GitHub by clicking the blue pull arrow (<img src="../images/pull.png" width="46" height="18">) in the git tab of RStudio.</p>
+<p>If you already have local changes and you pull, it may be rejected and you will have to <a href="../intro/collab.html">merge</a> the changes. We will practice this later today.</p>
+</section>
+<section id="work" class="level3">
+<h3 class="anchored" data-anchor-id="work">2. Work</h3>
+<p>Code away.</p>
+</section>
+<section id="stage" class="level3">
+<h3 class="anchored" data-anchor-id="stage">3. Stage</h3>
+<p>Once you are ready to commit your changes, click the checkbox next to the files you want to commit.</p>
+<p><img src="images/image-1684840014.png" class="img-fluid"></p>
+</section>
+<section id="commit" class="level3">
+<h3 class="anchored" data-anchor-id="commit">4. Commit</h3>
+<p>Click on the commit (<img src="../images/commit.png" class="img-fluid" width="50">) button and write a concise but informative description of the work you did or changes you made, and then hit commit.</p>
+</section>
+<section id="push" class="level3">
+<h3 class="anchored" data-anchor-id="push">5. Push</h3>
+<p>Click on the push button (<img src="../images/push.png" class="img-fluid" width="47">) to send your changes to our GitHub repo.</p>
+</section>
+</section>
+<section id="committing" class="level2">
+<h2 class="anchored" data-anchor-id="committing">Committing</h2>
+<section id="what-to-commit" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-commit">What to Commit?</h3>
+<section id="yes" class="level4">
+<h4 class="anchored" data-anchor-id="yes">Yes:</h4>
+<ul>
+<li><p>Code</p></li>
+<li><p>Source files (including raw data if it is not too large)</p></li>
+<li><p>Configuration files (e.g.&nbsp;<code>.gitignore</code> and <code>****.Rproj</code>)</p></li>
+<li><p>Figures, Rmarkdown files, reports, and other outputs</p></li>
+<li><p>LaTeX, markdown, <code>.csv</code> and <code>.tsv</code> files</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+<section id="no" class="level4">
+<h4 class="anchored" data-anchor-id="no">No:</h4>
+<ul>
+<li><p>Personal or confidential information (e.g.&nbsp;passwords or PATs)</p></li>
+<li><p>Large datasets</p></li>
+<li><p>Microsoft Office documents (They are usually okay but can cause problems)</p></li>
+</ul>
+</section>
+<section id="ignoring-files" class="level4">
+<h4 class="anchored" data-anchor-id="ignoring-files">Ignoring Files</h4>
+<p>To tell git to ignore a file, add the path to the <code>.gitignore</code> file that was automatically created when you first created your version controlled R project. You can either do this by opening the file in RStudio or when in the Git tab, click <code>More</code> &gt; <code>Ignore…</code> and add the file paths there.</p>
+<p><img src="../images/gitignore_rstudio.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="how-often-should-you-commit" class="level3">
+<h3 class="anchored" data-anchor-id="how-often-should-you-commit">How often should you commit?</h3>
+<p>Often. Each new commit is your fall back if something goes wrong.</p>
+</section>
+<section id="commit-messages" class="level3">
+<h3 class="anchored" data-anchor-id="commit-messages">Commit Messages</h3>
+<p>It’s helpful to think about what you did and write a concise description (&lt; 50 characters). If you made many changes and can’t summarize your changes and why concisely, you might need to commit more often. Also remember that commit messages will be public in public repositories or if you make a private repository public after publishing.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -310,6 +492,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../intro/why.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Why should you use Git/GitHub?</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../intro/collab.html" class="pagination-link">
+        <span class="nav-page-text">Collaborate</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

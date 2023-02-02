@@ -46,5 +46,8 @@
   },
   "intro/recover.qmd": {
     "recover.html": "abb8b314"
+  },
+  "activities/create_act.qmd": {
+    "create_act.html": "ef81aae7"
   }
 }

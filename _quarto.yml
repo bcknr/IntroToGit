@@ -35,7 +35,7 @@ website:
           - activities/create_act.qmd
       #    - activities/workflow_act.qmd
           - activities/collab_act.qmd
-      #     - activities/recover_act.qmd
+          - activities/recover_act.qmd
         
 format:
   html:

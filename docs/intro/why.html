@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Git and Github with RStudio - Why?</title>
+<title>Introduction to Git and Github with RStudio - Why should you use Git/GitHub?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../intro/workflow.html" rel="next">
+<link href="../intro/whatisgit.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -78,7 +80,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Why?</h1>
+      <h1 class="quarto-secondary-nav-title">Why should you use Git/GitHub?</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -139,6 +141,66 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro to Git/GitHub</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/whatisgit.html" class="sidebar-item-text sidebar-link">What are Git and GitHub?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/why.html" class="sidebar-item-text sidebar-link active">Why should you use Git/GitHub?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/workflow.html" class="sidebar-item-text sidebar-link">A Basic Workflow</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/collab.html" class="sidebar-item-text sidebar-link">Collaborate</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/recover.html" class="sidebar-item-text sidebar-link">‘Disaster’ Recovery</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Activities</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/create_act.html" class="sidebar-item-text sidebar-link">Create a Repo</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/collab_act.html" class="sidebar-item-text sidebar-link">Collaborate</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/recover_act.html" class="sidebar-item-text sidebar-link">Break it</a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -148,14 +210,13 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-should-you-use-gitgithub" id="toc-why-should-you-use-gitgithub" class="nav-link active" data-scroll-target="#why-should-you-use-gitgithub">Why should you use Git/GitHub?</a>
+  <li><a href="#collaboration-and-version-control" id="toc-collaboration-and-version-control" class="nav-link active" data-scroll-target="#collaboration-and-version-control"><span class="toc-section-number">1</span>  Collaboration and Version Control</a></li>
+  <li><a href="#reproducibility-and-sharing" id="toc-reproducibility-and-sharing" class="nav-link" data-scroll-target="#reproducibility-and-sharing"><span class="toc-section-number">2</span>  Reproducibility and Sharing</a>
   <ul class="collapse">
-  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
-  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version Control</a></li>
-  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
-  <li><a href="#sharing-research" id="toc-sharing-research" class="nav-link" data-scroll-target="#sharing-research">Sharing Research</a></li>
-  <li><a href="#recover-from-mistakes" id="toc-recover-from-mistakes" class="nav-link" data-scroll-target="#recover-from-mistakes">Recover from mistakes</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="toc-section-number">2.1</span>  Reproducibility</a></li>
+  <li><a href="#sharing" id="toc-sharing" class="nav-link" data-scroll-target="#sharing"><span class="toc-section-number">2.2</span>  Sharing</a></li>
   </ul></li>
+  <li><a href="#recover-from-mistakes" id="toc-recover-from-mistakes" class="nav-link" data-scroll-target="#recover-from-mistakes"><span class="toc-section-number">3</span>  Recover from mistakes</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/bcknr/IntroToGit/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -164,7 +225,7 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Why?</h1>
+<h1 class="title d-none d-lg-block">Why should you use Git/GitHub?</h1>
 </div>
 
 
@@ -179,25 +240,58 @@ gtag('config', 'G-C8C153PJMW', { 'anonymize_ip': true});
 
 </header>
 
-<section id="why-should-you-use-gitgithub" class="level2">
-<h2 class="anchored" data-anchor-id="why-should-you-use-gitgithub">Why should you use Git/GitHub?</h2>
-<section id="collaboration" class="level3">
-<h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
+<section id="collaboration-and-version-control" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="collaboration-and-version-control"><span class="header-section-number">1</span> Collaboration and Version Control</h2>
+<p>Git allows you to keep track of all the versions of your analysis and track changes even when all your collaborators are working on different computers. The utility of Git-based version control might be apparent for massive collaborative projects, like the <code>dplyr</code> package with over 250 contributors.</p>
+<p><img src="../images/commits.png" class="img-fluid" width="771"></p>
+<p>But even for smaller projects (or if you work alone), there are benefits to avoiding the “file renaming” method, for example:</p>
+<ul>
+<li><p>You can collaborate on the most up-to-date versions of the analysis asynchronously</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://doi.org/10.1186/1751-0473-8-7"><img src="../images/colabworkflow.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">https://doi.org/10.1186/1751-0473-8-7</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>You can see what you changed, who made the change, and when between versions by looking at the “diff,”even years later</p>
+<p><img src="../images/diff.png" class="img-fluid"></p></li>
+<li><p>If you make a mistake and break your code or want to try something new, you can always revert to the last working version</p></li>
+<li><p>It allows you to combine organizing and sharing your work into your daily workflow, and</p></li>
+<li><p>Make revisiting your code easier for future you.</p></li>
+</ul>
 </section>
-<section id="version-control" class="level3">
-<h3 class="anchored" data-anchor-id="version-control">Version Control</h3>
+<section id="reproducibility-and-sharing" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="reproducibility-and-sharing"><span class="header-section-number">2</span> Reproducibility and Sharing</h2>
+<section id="reproducibility" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">2.1</span> Reproducibility</h3>
+<p>We make any small decisions during data analysis that can significantly impact the outcome of an analysis. Often, these choices are left out of the methods sections of publications. Hosting your work on GitHub in a public repository provides a line-for-line method for your analysis which can be reviewed by others interested in your work or looking to use similar methods.</p>
 </section>
-<section id="reproducibility" class="level3">
-<h3 class="anchored" data-anchor-id="reproducibility">Reproducibility</h3>
+<section id="sharing" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sharing"><span class="header-section-number">2.2</span> Sharing</h3>
+<p>GitHub provides great options for hosting and sharing your research. (This is a not an exhaustive list)</p>
+<ul>
+<li><p>GitHub Markdown Documents: I’ve used this in the past for Knit Rmarkdown files (It’s not the cleanest approach but here is an <a href="https://github.com/bcknr/Andrena_asteris_SDM/blob/main/R/Aa_SDM.md">example</a> from a recent project)</p>
+<p><img src="../images/gitmarkdown.png" class="img-fluid"></p></li>
+<li><p>Websites</p>
+<ul>
+<li><p><a href="https://quarto.org/">Quarto</a> - This website was made with Quarto</p>
+<p><img src="../images/website.png" class="img-fluid"></p></li>
+<li><p><a href="https://pkgdown.r-lib.org/">pkgdown</a></p></li>
+<li><p>Other <a href="https://pages.github.com/">GitHub Pages</a> options</p></li>
+</ul></li>
+<li><p>Books/reports</p>
+<ul>
+<li><p><a href="https://bookdown.org/">Bookdown</a></p></li>
+<li><p>Quarto</p></li>
+</ul></li>
+</ul>
 </section>
-<section id="sharing-research" class="level3">
-<h3 class="anchored" data-anchor-id="sharing-research">Sharing Research</h3>
 </section>
-<section id="recover-from-mistakes" class="level3">
-<h3 class="anchored" data-anchor-id="recover-from-mistakes">Recover from mistakes</h3>
+<section id="recover-from-mistakes" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="recover-from-mistakes"><span class="header-section-number">3</span> Recover from mistakes</h2>
+<p>See the section on <a href="../intro/recover.html">recovering from mistakes</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -334,6 +428,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../intro/whatisgit.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What are Git and GitHub?</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../intro/workflow.html" class="pagination-link">
+        <span class="nav-page-text">A Basic Workflow</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

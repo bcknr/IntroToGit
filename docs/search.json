@@ -7,6 +7,69 @@
     "text": "This introductory workshop will cover the fundamentals of using Git and GitHub in Rstudio. With such a short workshop, I will only be able to get you started with using Git, but at the end, you should have a general workflow to start using Git in your research. We’ll learn how to install and link Git to Rstudio, create and clone a GitHub repo, practice the “pull - commit - push” process, and explore how Git can help you recover from programming disasters. Throughout, I’ll provide some tips for collaborating with others and increasing the reproducibility of your analyses.\n\nPre-workshop Homework\nInstalling and configuring Git and GitHub be finicky. To give us as much time as possible and to ensure that we all start on the right foot, please work through “Getting Started” prior to attending the workshop.\n\nFurther Reading:\nThis workshop pulls heavily from Jenny Bryan’s resource “Happy Git and GitHub for the useR”. As you continue learning to use Git, keep this resource close by."
   },
   {
+    "objectID": "activities/recover_act.html",
+    "href": "activities/recover_act.html",
+    "title": "Break it",
+    "section": "",
+    "text": "You might not find yourself needing to look back through your commit history often, but it is useful to have some familiarity. For example, I recently used it to recover a chunk of code to make a figure I deleted a month ago and decided I actually wanted.\nNavigate to the workshop website’s GitHub repo. Using GitHub’s commit history feature, find the commit message “Reworked to add auto merge and conflict examples” and find the answers to the following questions.\n\n\nWhat is the commit ID?\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nCommit ID: 7ae9d4e.\n\n\n\n\n\nHow many files did I edit?\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nOnly one file (collab_act.qmd)\n\n\n\n\n\nWhat change did I make to line 55 in the older version?\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nI only made one small change where I corrected the capitalization of “GitHub.” Admittedly, that is not a very exciting change."
+  },
+  {
+    "objectID": "activities/recover_act.html#break-everything-and-fix-it",
+    "href": "activities/recover_act.html#break-everything-and-fix-it",
+    "title": "Break it",
+    "section": "2 Break everything (and fix it)",
+    "text": "2 Break everything (and fix it)\n\n2.1 Break your code\nUsing the IntroToGit_Activity repository you forked in the collaboration activity, edit the script.R file by replacing the code to create the plot with the code below.\n\nplot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal,Width, color = Species)) +\n  geom_point(size = 2) +\n  geom_smooth() +\n  xlab(\"Sepal Length (mm)\") +\n  ylab(\"Sepal Width (mm)\") \n  scale_color_manual(values = c(\"tan\", \"wheat\", \"burlywood2\")) +\n  theme_bw()\n\n\nTry running the new code. Does it work? Take a second to try to identify the source(s) of the error without using the diff.\nView the diff for the script.R file. Can you tell where the changes to the code occurred?\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nThere appear to be changes in three lines, with the change in the line 16 resulting from a change in line 15.\n\nRStudio doesn’t do quite as good of a job at highlighting the exact places where changes occurred as Git, but it will help you narrow it down. If you look closely at line 11, the period in Sepal.Width was changed to a comma and in line 15 the + at the end of the line was removed.\n\n\n\n\nFix the code by reverting the change using the RStudio GUI and check to see if the code runs as expected.\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nIn using the GUI, open the diff window and click revert.\n\n\n\n\n\n(More advance) - How would you recover the previous version if you committed the change but haven’t pushed it to GitHub yet?\n\nEdit the code, save the file, and commit the changes but don’t push.\nUse the terminal to perform a “soft” reset of your last commit\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nIn the terminal run $ git reset --soft HEAD~1. This will reset your local repo to right before you hit commit. Since we used a soft reset, it will keep all of your files and edits as they were. This can be particularly useful when you accidentally push too large of a file.\n\n\n\n\n\n2.2 Break your repo\n\n\n\nxkcd\n\n\nCreate a more realistic repo:\n\nCreate a new document in the forked repository (or another repository that isn’t important to you).\nAdd this file to .gitignore so that it won’t be pushed to GitHub. Imagine that this is a large data set.\nSync your local repo with GitHub with usual the pull->stage->commit->push workflow.\n\nNow assume that you are experiencing an error that cannot be resolved with one of the other methods. Reset your repository by following the xkcd steps.\n\nCopy the forked repository to another location on your computer\nDelete the original folder\nClone the repository again from GitHub\nCheck to see if any documents (e.g. the one you created early are missing)\nMove any missing documents into your new repo.\nMake sure you can pull and push changes."
+  },
+  {
+    "objectID": "activities/create_act.html",
+    "href": "activities/create_act.html",
+    "title": "Create a Repo",
+    "section": "",
+    "text": "Creating a repo was one of the first things you did with GitHub. Now that you have more information on each step of the process try to create a new repo (named whatever you would like) and make sure you can push changes from RStudio.\n\n\n\n\n\n\nStuck?\n\n\n\n\n\nReview the step by step process on the “Getting Started” page or the “workflow” page."
+  },
+  {
+    "objectID": "activities/collab_act.html",
+    "href": "activities/collab_act.html",
+    "title": "Collaborate",
+    "section": "",
+    "text": "Working with a partner, we will practice collaborating with others. I have created a repo for this activity on GitHub."
+  },
+  {
+    "objectID": "activities/collab_act.html#fork-the-introtogit_activity-repo",
+    "href": "activities/collab_act.html#fork-the-introtogit_activity-repo",
+    "title": "Collaborate",
+    "section": "1 Fork the IntroToGit_Activity repo",
+    "text": "1 Fork the IntroToGit_Activity repo\nWorking on one computer, navigate to the repo created for this activity and fork the repo. The person whose computer you are working on will be “partner 1” for the remainder of this activity."
+  },
+  {
+    "objectID": "activities/collab_act.html#add-a-collaborator",
+    "href": "activities/collab_act.html#add-a-collaborator",
+    "title": "Collaborate",
+    "section": "2 Add a collaborator",
+    "text": "2 Add a collaborator\nAdd your partner as a collaborator to the forked repo using their GitHub username."
+  },
+  {
+    "objectID": "activities/collab_act.html#clone-the-repo",
+    "href": "activities/collab_act.html#clone-the-repo",
+    "title": "Collaborate",
+    "section": "3 Clone the Repo",
+    "text": "3 Clone the Repo\nNow each working on your own, follow the steps to clone the repo to your machine."
+  },
+  {
+    "objectID": "activities/collab_act.html#explore-the-code",
+    "href": "activities/collab_act.html#explore-the-code",
+    "title": "Collaborate",
+    "section": "4 Explore the Code",
+    "text": "4 Explore the Code\nIn the new project, open script.R in RStudio. Ensure you are working with the most up-to-date version by pulling any changes before diving into the code.\nYou’ll note that the code is to create a horribly colored plot of Sepal.Length vs Sepal.Width data from iris dataset. It may also look familiar from our discussion of merge conflicts.\n\n# Load Iris dataset and ggplot2\nlibrary(datasets)\nlibrary(ggplot2)\ndata(\"iris\")\n\n#Partner 1: \n\n#Partner 2: \n\n# Plot\nplot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  geom_point(size = 2) +\n  geom_smooth() +\n  xlab(\"Sepal Length\") +\n  ylab(\"Sepal Width\") +\n  scale_color_manual(values = c(\"tan\", \"wheat\", \"burlywood2\")) +\n  theme_bw()\n  \nplot\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'"
+  },
+  {
+    "objectID": "activities/collab_act.html#modify-the-code",
+    "href": "activities/collab_act.html#modify-the-code",
+    "title": "Collaborate",
+    "section": "5 Modify the code",
+    "text": "5 Modify the code\n\n5.1 Without a conflict…\n\nEdit different parts of the code than your partner:\n\nPartner 1 - Add your name or a comment to line 6 (# Partner 1:)\nPartner 2 - Add your name or a comment to line 8 (# Partner 2:)\n\nNow that both of you have edited your file, partner 1 should stage, commit, and push their changes to GitHub.\nHave partner two pull the new changes. What happens?\nResolve the error message (see the step-by-step if you need help) and try pushing your changes again. Was it successful? What does the message mean?\n\n\n\n5.2 With a conflict…\nNow that we have successfully experienced the joys of an automatic merge, we will force a conflict. You may have noticed that the color palette for this figure could be better.\n\nWithout consulting with your partner, choose a new color palette for this figure by changing the names in scale_color_manual() and save the changes.\n\n\n\n\n\n\nR Colors\n\n\n\n\n\n\n\n\nBookdown.org\n\n\n\n\n\nHave one partner stage, commit, and push their changes first.\nOnce the changes have been pushed to GitHub, have the other partner try pulling the changes. Was it successful?\nIf you got an error message (you should have) read any follow the hints given to you.\n\n\n\n\n\n\nHint\n\n\n\n\n\nBased on the error, we should commit the change and pull again. This will create a merge conflict.\n\n\n\nWork with your partner to resolve any merge conflicts, commit the resolved version, and push the changes.\n\n\n\n\n\n\nHint\n\n\n\n\n\nRemember, you will need to either select one of the versions or combine them and remove all conflict markers from the code.\n\n\n\n\n\n\n5.3 Switch\nSwitching which partner pushes the changes first. If you feel daring, try editing more of the code. Resolving merge conflicts takes practice.\n\n\n\n\n\n\nResetting a merge commit\n\n\n\n\n\nIf you find yourself needing to reset a merge commit, use $ git reset HEAD^"
+  },
+  {
     "objectID": "getting_started/questions.html",
     "href": "getting_started/questions.html",
     "title": "Questions?",
@@ -91,31 +154,115 @@
     "text": "3 Link Git to R\nThe R package usethis allows us to configure Git in R. Install usethis if you have not already and set your Git credentials using the same username and email you used to create your GitHub account.\n\ninstall.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"username\", user.email = \"email@cornell.edu\")"
   },
   {
+    "objectID": "intro/collab.html",
+    "href": "intro/collab.html",
+    "title": "Collaborate",
+    "section": "",
+    "text": "You can add collaborators to a private (or public) repo in GitHub by clicking settings > Collaborators > Add People\n\nIf you are doing a lot of collaboration, it will benefit you to learn about branches. These allow you to work collaboratively without always stepping on each other’s toes or work on the part of a project without worrying too much about breaking the whole thing. Once satisfied with how the branch performs, you can merge it with the main branch."
+  },
+  {
+    "objectID": "intro/collab.html#merging-and-merge-conflicts",
+    "href": "intro/collab.html#merging-and-merge-conflicts",
+    "title": "Collaborate",
+    "section": "Merging (and merge conflicts)",
+    "text": "Merging (and merge conflicts)\nIf you are collaborating with someone else and are both working on the same file, you may need to merge your edits when committing and pushing the file to GitHub. In the best-case scenario, you both edited different lines, and the files can be merged automatically.\n\nIf not, you will have to merge the files manually. All this means is that you will need to pick which changes to keep.\n\nPulling changes with an uncommitted file\nIf you practice the “pull-stage-commit-push” workflow I’ve promoted up to this point, you’ll hit a snag when you try to pull the new changes if you made edits.\n\nNotice that the error message tells you to commit or “stash” your changes. We won’t cover stashing changes here. So let’s stage and commit our changes before trying again.\n\nGreat, there were no errors committing. But what if we try to push our changes?\n\n\nPushing changes with a committed file\nIf there are new changes to the file you are working on GitHub that aren’t reflected in your local repo pushing your changes may result in an error.\n\nWhy? The push to GitHub was rejected because “the tip of my branch is behind.” All this means is that there have been changes to the files since I last successfully pulled. Luckily, you should be able to see from the hints and your Git vocab that all we have to do is “pull” before pushing.\n\nWell, its a step in the right direction, but we still haven’t succeeded in pushing our changes to GitHub. You’ll notice that the automatic merge failed because my collaborator and I edited the same line of code. Let’s resolve the conflict.\n\n# Load Iris dataset and ggplot2\nlibrary(datasets)\nlibrary(ggplot2)\ndata(\"iris\")\n\n# Plot\nplot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  geom_point(size = 2) +\n  geom_smooth() +\n  xlab(\"Sepal Length\") +\n  ylab(\"Sepal Width\") +\n<<<<<<< HEAD\n  scale_color_manual(values = c(\"olivedrab4\", \"aquamarine4\", \"burlywood2\")) +\n=======\n  scale_color_manual(values = c(\"aquamarine\", \"aquamarine4\", \"darkcyan\")) +\n>>>>>>> 266103a4df6f7613c11d8d5b6070d34db3fa9e79\n  theme_bw()\n  \nplot\n\nBoth my collaborator and my changes are now show in the editor. They are bracketed by “version control conflict markers” which are <<<<<<< HEAD and >>>>>>> 266103a4df6f7613c11d8d5b6070d34db3fa9e79. The long string of letters and numbers is just a hash identifying the commit and the ======= separates the two different versions, so I need to either pick one or figure out how to combine them.\nIn this case my version of a bad color palette is clearly better. So lets delete my collaborators code and all of the conflict markers.\n\n# Load Iris dataset and ggplot2\nlibrary(datasets)\nlibrary(ggplot2)\ndata(\"iris\")\n\n# Plot\nplot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  geom_point(size = 2) +\n  geom_smooth() +\n  xlab(\"Sepal Length\") +\n  ylab(\"Sepal Width\") +\n  scale_color_manual(values = c(\"olivedrab4\", \"aquamarine4\", \"burlywood2\")) +\n  theme_bw()\n  \nplot\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nThat looks much better. Now that I have resolved the merge conflict, I will commit my changes again, this time adding a commit message explaining the merge and then pushing my changes.\nResolving merge conflicts can be annoying. I highly recommend you learn about branches if you collaborate with others. Branches don’t remove all merge conflicts but allow you to handle them through “Pull Requests” when you have time. Unfortunately, we have a limited time today, so you will have to read up on this on your own."
+  },
+  {
+    "objectID": "intro/collab.html#forks",
+    "href": "intro/collab.html#forks",
+    "title": "Collaborate",
+    "section": "Forks",
+    "text": "Forks\nGitHub allows you to get a copy of other public repositories. You can clone the repo using the same method as you would for cloning your own or you can “fork and clone.”\nForking has the added benefit of allowing you to suggest changes to the repository owner (called “pull requests”), and enabling you to use the repo as if you created it.\nTo fork a repo\n\nClick on “Fork” in the top right when on the repo’s main page\n\nClick “Create a new fork”, and\n\nUpdate the information as you wish before clicking the big green button as usual."
+  },
+  {
     "objectID": "intro/workflow.html",
     "href": "intro/workflow.html",
-    "title": "Workflow",
+    "title": "A Basic Workflow",
     "section": "",
-    "text": "Pull commit push\nwhat to commit\n(gitignore)\n(too big of a file)\ncommit messages\nhow often\nFixing a broken commit"
+    "text": "The easiest and preferred way to create a new project is to use GitHub first (this is exactly what we did in “Getting Started”).\n\n\n\nLog in to your GitHub account and click  on the left hand side of the home page.\nName your repo, provide a brief description, check “Add a README file,” and then click\n\nClick  and copy the “HTTPS” link\n\n\n\n\n\n\nOpen RStudio and create a new project: File -> New Project… -> Version Control -> Git\n\n\n\n\n\n\n\n\n\n\n\n\nPaste the link you copied from GitHub in the Repository URL field. The Project directory name fill will automatically be populated with your Repo’s name as it appears on GitHub. Select a location to store your project. Take note of where you are saving your project. I store all of my version controlled (Git) projects in a subdirectory of my home directory named “github” (~/github). This has the benefit of keeping everything in one easy-to-find location. After you click create project, you may be prompted to enter your GitHub credentials."
+  },
+  {
+    "objectID": "intro/workflow.html#pull-work-stage-commit-push",
+    "href": "intro/workflow.html#pull-work-stage-commit-push",
+    "title": "A Basic Workflow",
+    "section": "Pull-(work)-stage-commit-push",
+    "text": "Pull-(work)-stage-commit-push\nThe simplest workflow is to pull, stage, commit, and push. Other methods, such as Jenny Bryan’s repeated amend workflow, have some pros over this basic method, including the benefit of having many incremental steps to fall back on, but I will leave those as additional reading.\n\n\n\nhttps://nt246.github.io/NTRES6940-data-science/lesson4-collaboration.html\n\n\n\n1. Pull\nAt the beginning of each session, start by Pulling the most up-to-date versions from GitHub by clicking the blue pull arrow () in the git tab of RStudio.\nIf you already have local changes and you pull, it may be rejected and you will have to merge the changes. We will practice this later today.\n\n\n2. Work\nCode away.\n\n\n3. Stage\nOnce you are ready to commit your changes, click the checkbox next to the files you want to commit.\n\n\n\n4. Commit\nClick on the commit () button and write a concise but informative description of the work you did or changes you made, and then hit commit.\n\n\n5. Push\nClick on the push button () to send your changes to our GitHub repo."
+  },
+  {
+    "objectID": "intro/workflow.html#committing",
+    "href": "intro/workflow.html#committing",
+    "title": "A Basic Workflow",
+    "section": "Committing",
+    "text": "Committing\n\nWhat to Commit?\n\nYes:\n\nCode\nSource files (including raw data if it is not too large)\nConfiguration files (e.g. .gitignore and ****.Rproj)\nFigures, Rmarkdown files, reports, and other outputs\nLaTeX, markdown, .csv and .tsv files\netc.\n\n\n\nNo:\n\nPersonal or confidential information (e.g. passwords or PATs)\nLarge datasets\nMicrosoft Office documents (They are usually okay but can cause problems)\n\n\n\nIgnoring Files\nTo tell git to ignore a file, add the path to the .gitignore file that was automatically created when you first created your version controlled R project. You can either do this by opening the file in RStudio or when in the Git tab, click More > Ignore… and add the file paths there.\n\n\n\n\nHow often should you commit?\nOften. Each new commit is your fall back if something goes wrong.\n\n\nCommit Messages\nIt’s helpful to think about what you did and write a concise description (< 50 characters). If you made many changes and can’t summarize your changes and why concisely, you might need to commit more often. Also remember that commit messages will be public in public repositories or if you make a private repository public after publishing."
   },
   {
     "objectID": "intro/whatisgit.html",
     "href": "intro/whatisgit.html",
     "title": "What are Git and GitHub?",
     "section": "",
-    "text": "If you have ever found your self appending _copy , _final , final_final_MAB BND copy1_v6_MAB, etc. to the end of your files you’ve tried extremely rudimentary and inelegant version control. The issue, beyond that you may never again know what the true final file was, is that it will be difficult or impossible to identify what changed between versions, who made those changes, or collaborate using the same version of a file.\n\n\n\n\n\n\nxkcd"
+    "text": "If you have ever found your self appending _copy , _final , final_final_MAB XYZ copy1_v6_MAB, etc. to the end of your files you’ve tried rudimentary and inelegant version control. Beyond that, you may never again know what the final file was, it will be difficult or impossible to identify what changed between versions, who made those changes, or collaborate using the same version of a file.\n\n\n\n\n\n\nxkcd"
   },
   {
     "objectID": "intro/whatisgit.html#git",
     "href": "intro/whatisgit.html#git",
     "title": "What are Git and GitHub?",
     "section": "Git",
-    "text": "Git\nGit is a version control system that tracks changes in collections of files (repositories or “repos”) over time. Each repo is a self contained project allowing you to track changes to your project in a structured and organized way."
+    "text": "Git\nGit is a version control system that tracks changes in collections of files (repositories or “repos”) over time. Each repo is a self-contained project allowing you to track changes to your project in a structured and organized way. It functions similarly to a Google Doc but for code."
   },
   {
     "objectID": "intro/whatisgit.html#github",
     "href": "intro/whatisgit.html#github",
     "title": "What are Git and GitHub?",
     "section": "GitHub",
-    "text": "GitHub\nGitHub is an online host for your (and others) Git version controled repositories. It allows you to visualizes changes to your code and other non-code files."
+    "text": "GitHub\nGitHub is an online host for your (and other’s) Git version controlled repositories. It allows you to\n\nvisualize changes to your code and other non-code files,\nstore your files backed up online,\ncollaborate and share with others, and\nkeep track of bugs and to-dos."
+  },
+  {
+    "objectID": "intro/why.html",
+    "href": "intro/why.html",
+    "title": "Why should you use Git/GitHub?",
+    "section": "",
+    "text": "Git allows you to keep track of all the versions of your analysis and track changes even when all your collaborators are working on different computers. The utility of Git-based version control might be apparent for massive collaborative projects, like the dplyr package with over 250 contributors.\n\nBut even for smaller projects (or if you work alone), there are benefits to avoiding the “file renaming” method, for example:\n\nYou can collaborate on the most up-to-date versions of the analysis asynchronously\n\n\n\nhttps://doi.org/10.1186/1751-0473-8-7\n\n\nYou can see what you changed, who made the change, and when between versions by looking at the “diff,”even years later\n\nIf you make a mistake and break your code or want to try something new, you can always revert to the last working version\nIt allows you to combine organizing and sharing your work into your daily workflow, and\nMake revisiting your code easier for future you."
+  },
+  {
+    "objectID": "intro/why.html#reproducibility-and-sharing",
+    "href": "intro/why.html#reproducibility-and-sharing",
+    "title": "Why should you use Git/GitHub?",
+    "section": "2 Reproducibility and Sharing",
+    "text": "2 Reproducibility and Sharing\n\n2.1 Reproducibility\nWe make any small decisions during data analysis that can significantly impact the outcome of an analysis. Often, these choices are left out of the methods sections of publications. Hosting your work on GitHub in a public repository provides a line-for-line method for your analysis which can be reviewed by others interested in your work or looking to use similar methods.\n\n\n2.2 Sharing\nGitHub provides great options for hosting and sharing your research. (This is a not an exhaustive list)\n\nGitHub Markdown Documents: I’ve used this in the past for Knit Rmarkdown files (It’s not the cleanest approach but here is an example from a recent project)\n\nWebsites\n\nQuarto - This website was made with Quarto\n\npkgdown\nOther GitHub Pages options\n\nBooks/reports\n\nBookdown\nQuarto"
+  },
+  {
+    "objectID": "intro/why.html#recover-from-mistakes",
+    "href": "intro/why.html#recover-from-mistakes",
+    "title": "Why should you use Git/GitHub?",
+    "section": "3 Recover from mistakes",
+    "text": "3 Recover from mistakes\nSee the section on recovering from mistakes."
+  },
+  {
+    "objectID": "intro/recover.html",
+    "href": "intro/recover.html",
+    "title": "‘Disaster’ Recovery",
+    "section": "",
+    "text": "Git allows you to recover from mistakes by allowing you to revert to previous versions.\nIf you commit your changes and push them to GitHub, often this becomes your “worst case scenario.” Now if you have an error,\n\nSave a copy of your project directory (or the files that changed) somewhere else safe, just in case, and\nRename your local repository\nClone the repo to your machine again\nCopy any necessary files to the new directory and check that everything works\nStage, commit, push\n\nWe will practice this in the “Break it” activity."
+  },
+  {
+    "objectID": "intro/recover.html#revert-to-the-last-commit-in-the-rstudio-gui",
+    "href": "intro/recover.html#revert-to-the-last-commit-in-the-rstudio-gui",
+    "title": "‘Disaster’ Recovery",
+    "section": "Revert to the last commit in the RStudio GUI",
+    "text": "Revert to the last commit in the RStudio GUI\nIf you prefer using RStudio’s visual git commands, you can revert to the last committed version of a file by clicking on the “diff” button () and selecting the file you would like to revert. At the bottom, you will see all the changes you made (deletions in red, additions in green).\nTo revert all the changes, select the file you want to undo and click “revert” at the top of the window."
+  },
+  {
+    "objectID": "intro/recover.html#amend-the-last-commit",
+    "href": "intro/recover.html#amend-the-last-commit",
+    "title": "‘Disaster’ Recovery",
+    "section": "Amend the last commit",
+    "text": "Amend the last commit\nBefore pushing your changes, you can amend the last commit in RStudio. Start by making a minor edit, so the files are shown in your Git tab again. Stage the file and click commit. Before committing the file or writing a commit message, click the box next to “Amend previous commit.” You can now edit the commit message."
+  },
+  {
+    "objectID": "intro/recover.html#more-advanced-git",
+    "href": "intro/recover.html#more-advanced-git",
+    "title": "‘Disaster’ Recovery",
+    "section": "(More) advanced Git",
+    "text": "(More) advanced Git\nUsing Git through RStudio is convenient but can be limiting. You can run various commands through the terminal, allowing for more advanced functionality.\n\nUndo your last (unpublished) commit\nIf you need to revert to a state before your last commit and have not pushed your changes to GitHub use the command line. Running $ git reset -- soft HEAD~1 in the terminal (or terminal tab in RStudio) will take you back to where you were right before you hit commit with all the same edits. This can be helpful if you push too much at once or realize you want to remove a file from the last commit.\n\n\n\n\n\n\n\n\n\n\n\nFor bigger mistakes...\n\n\n\nRun git reset --hard HEAD~1 in the terminal (either in R or on your computer). This is a hard reset to where you were at the last commit. When you need it, it’s great. But be careful when using this since you will lose changes to files!\n\n\n\n\nUndo a published commit\nIf you made significant errors, broke your code, accidentally introduced a bug, or tried something that just didn’t work (and weren’t using branches) you should probably just let it go, or you can try reversing the changes. It is probably best to avoid getting to this point but if you need it, here it is.\nStart by exploring the commit history to find which commit you would like to revert to.\n\nOn GitHub, click on the file you want to revert and click on history on the right of the screen.\n\n\n\nScroll through the history to find the commit you would like to revert to. Click on the blue numbers, the commit ID. You will see the “diff” for that commit and a commit hash on the right.\n\n\n\nIf you are certain you want to revert to this commit, enter\n$ git revert <the commit hash or id> into the terminal.\n\n\n\nCreate a branch based on an old state\nIf you aren’t certain about taking such drastic actions as reverting or resetting, it is possible to create a new branch (again, I recommend you read up on branches) based on your repo’s state at a previous commit.\n$ git checkout -b <new branch name> <hash or id>"
   }
 ]
