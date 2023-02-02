@@ -1,6 +1,114 @@
 ---
 title: "Break it"
 editor: visual
+number-sections: true
 ---
 
-A change.
+## Explore commit history
+
+You might not find yourself needing to look back through your commit history often, but it is useful to have some familiarity. For example, I recently used it to recover a chunk of code to make a figure I deleted a month ago and decided I actually wanted.
+
+Navigate to the workshop website's [GitHub repo](https://github.com/bcknr/IntroToGit). Using GitHub's commit history feature, find the commit message "Reworked to add auto merge and conflict examples" and find the answers to the following questions.
+
+![](/images/historybutton.png)
+
+1.  What is the commit ID?
+
+::: {.callout-note collapse="true" icon="false"}
+### Answer
+
+Commit ID: `7ae9d4e`.
+
+![](/images/recover_ans1.png)
+:::
+
+2.  How many files did I edit?
+
+::: {.callout-note collapse="true" icon="false"}
+### Answer
+
+Only one file (`collab_act.qmd`)
+
+![](/images/recover_ans2.png)
+:::
+
+3.  What change did I make to line 55 in the older version?
+
+::: {.callout-note collapse="true" icon="false"}
+### Answer
+
+I only made one small change where I corrected the capitalization of "GitHub." Admittedly, that is not a very exciting change.
+
+![](/images/recover_ans3.png)
+:::
+
+## Break everything (and fix it)
+
+### Break your code
+
+Using the [`IntroToGit_Activity`](https://github.com/bcknr/IntroToGit_Activity) repository you forked in the collaboration activity, edit the `script.R` file by replacing the code to create the plot with the code below.
+
+```{r}
+#| eval: false
+plot <- ggplot(iris, aes(x = Sepal.Length, y = Sepal,Width, color = Species)) +
+  geom_point(size = 2) +
+  geom_smooth() +
+  xlab("Sepal Length (mm)") +
+  ylab("Sepal Width (mm)") 
+  scale_color_manual(values = c("tan", "wheat", "burlywood2")) +
+  theme_bw()
+```
+
+1.  Try running the new code. Does it work? Take a second to try to identify the source(s) of the error without using the diff.
+
+2.  View the diff for the `script.R` file. Can you tell where the changes to the code occurred?
+
+::: {.callout-tip collapse="true" icon="false"}
+### Answer
+
+There appear to be changes in three lines, with the change in the line 16 resulting from a change in line 15.
+
+![](/images/recover_ans5.png)
+
+RStudio doesn't do quite as good of a job at highlighting the *exact* places where changes occurred as Git, but it will help you narrow it down. If you look closely at line 11, the period in `Sepal.Width` was changed to a comma and in line 15 the `+` at the end of the line was removed.
+:::
+
+3.  Fix the code by reverting the change using the RStudio GUI and check to see if the code runs as expected.
+
+::: {.callout-tip collapse="true" icon="false"}
+### Answer
+
+In using the GUI, open the diff window and click revert.
+
+![](/images/recover_ans6.png)
+:::
+
+4.  (More advance) - How would you recover the previous version if you committed the change but haven't pushed it to GitHub yet?
+    -   Edit the code, save the file, and commit the changes but **don't** push.
+
+    -   Use the terminal to perform a "soft" reset of your last commit
+
+::: {.callout-tip collapse="true" icon="false"}
+### Answer
+
+In the terminal run `$ git reset --soft HEAD~1`. This will reset your local repo to right before you hit commit. Since we used a soft reset, it will keep all of your files and edits as they were. This can be particularly useful when you accidentally push too large of a file.
+:::
+
+### Break your repo
+
+![xkcd](/images/burn.png)
+
+Create a more realistic repo:
+
+1.  Create a new document in the forked repository (or another repository that isn't important to you).
+2.  Add this file to `.gitignore` so that it won't be pushed to GitHub. Imagine that this is a large data set.
+3.  Sync your local repo with GitHub with usual the pull-\>stage-\>commit-\>push workflow.
+
+Now assume that you are experiencing an error that cannot be resolved with one of the other methods. Reset your repository by following the xkcd steps.
+
+1.  Copy the forked repository to another location on your computer
+2.  Delete the original folder
+3.  Clone the repository again from GitHub
+4.  Check to see if any documents (e.g. the one you created early are missing)
+5.  Move any missing documents into your new repo.
+6.  Make sure you can pull and push changes.

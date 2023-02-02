@@ -4,7 +4,7 @@ editor: visual
 number-sections: true
 ---
 
-Working with a partner, we will practice collaborating with others. I have a created a [repo](https://github.com/bcknr/IntroToGit_Activity) for this activity on GitHub
+Working with a partner, we will practice collaborating with others. I have created a [repo](https://github.com/bcknr/IntroToGit_Activity) for this activity on GitHub.
 
 ## Fork the [`IntroToGit_Activity`](https://github.com/bcknr/IntroToGit_Activity) repo
 
@@ -20,7 +20,7 @@ Now each working on your own, follow the steps to clone the repo to your machine
 
 ## Explore the Code
 
-In the new project, open the file named script.R. Get in the habit of ensuring you're working on the most up-to-date version by pulling any changes before diving into the code.
+In the new project, open `script.R` in RStudio. Ensure you are working with the most up-to-date version by pulling any changes before diving into the code.
 
 You'll note that the code is to create a horribly colored plot of Sepal.Length vs Sepal.Width data from iris dataset. It may also look familiar from our discussion of merge conflicts.
 
@@ -50,32 +50,35 @@ plot
 
 ### Without a conflict...
 
-Each partner should then edit a unique part of the code.
+1.  Edit different parts of the code than your partner:
+    -   Partner 1 - Add your name or a comment to line 6 (`# Partner 1:`)
 
-Partner 1 - Add your name or a comment to line 6 (`# Partner 1:`)
-
-Partner 2 - Add your name or a comment to line 8 (`# Partner 2:`)
-
-Now that both of you have edited your file, partner 1 should stage, commit, and push their changes to GitHub.
-
-Have partner two pull the new changes. What happens?
-
-Resolve the error message (see the [step-by-step](../intro/collab.qmd) if you need help) and try pushing your changes again. Was it successful? What does the message mean?
+    -   Partner 2 - Add your name or a comment to line 8 (`# Partner 2:`)
+2.  Now that both of you have edited your file, partner 1 should stage, commit, and push their changes to GitHub.
+3.  Have partner two pull the new changes. What happens?
+4.  Resolve the error message (see the [step-by-step](../intro/collab.qmd) if you need help) and try pushing your changes again. Was it successful? What does the message mean?
 
 ### With a conflict...
 
-Now that we have successfully experienced the joys of an automatic merge, we will force a conflict. You may have noticed that the color palette for this figure is not great.
+Now that we have successfully experienced the joys of an automatic merge, we will force a conflict. You may have noticed that the color palette for this figure could be better.
 
 1.  **Without** consulting with your partner, choose a new color palette for this figure by changing the names in scale_color_manual() and save the changes.
 
+    ::: {.callout-tip collapse="true"}
+    ## R Colors
+
+    [![Bookdown.org](/images/colors.png)](https://bookdown.org/hneth/ds4psy/ds4psy_files/figure-html/apx-color-sample-1.png)
+    :::
+
 2.  Have **one** partner stage, commit, and push their changes first.
 
-3.  Once the changes are pushed to GitHub, have the other partner try pulling the changes. Was it successful?
+3.  Once the changes have been pushed to GitHub, have the other partner try pulling the changes. Was it successful?
 
-4.  Read any follow the hints in the error messages.
+4.  If you got an error message (you should have) read any follow the hints given to you.
 
     ::: {.callout-tip collapse="true"}
     ## Hint
+
     Based on the error, we should commit the change and pull again. This will create a merge conflict.
     :::
 
@@ -83,9 +86,16 @@ Now that we have successfully experienced the joys of an automatic merge, we wil
 
     ::: {.callout-tip collapse="true"}
     ## Hint
-    Remember, you will need to either select one of the versions, or combine them, and remove all of the conflict markers from the code.
+
+    Remember, you will need to either select one of the versions or combine them and remove all conflict markers from the code.
     :::
 
 ### Switch
 
-Try switching which partner pushes the changes first. If you feel daring, try editing more of the code. Resolving merge conflicts takes practice.
+Switching which partner pushes the changes first. If you feel daring, try editing more of the code. Resolving merge conflicts takes practice.
+
+::: {.callout-tip collapse="true"}
+## Resetting a merge commit
+
+If you find yourself needing to reset a merge commit, use `$ git reset HEAD^`
+:::
