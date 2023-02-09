@@ -83,7 +83,7 @@ In using the GUI, open the diff window and click revert.
 ![](/images/recover_ans6.png)
 :::
 
-4.  (More advance) - How would you recover the previous version if you committed the change but haven't pushed it to GitHub yet?
+4.  (More advanced) - How would you recover the previous version if you committed the change but haven't pushed it to GitHub yet?
     -   Edit the code, save the file, and commit the changes but **don't** push.
 
     -   Use the terminal to perform a "soft" reset of your last commit
